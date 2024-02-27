@@ -1,0 +1,251 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation-plan.html\">Recommendation Plan</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>partOf</b>: <a href=\"PlanDefinition-RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients.html\">Prophylactic Anticoagulation for Population: non-ICU, High-Risk COVID-19 Patients</a></p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: At Least <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"file:///github/workspace/output/CodeSystem-cs-action-combination-method.html\">Action Combination Method</a>#at-least)</span></p><blockquote><p><b>url</b></p><code>threshold</code></blockquote><p><b>value</b>: 1</p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/therapeutic-anticoagulation</code></p><p><b>version</b>: 7.0</p><p><b>name</b>: Therapeutic_Anticoagulation_No_Renal_Function_Impairment</p><p><b>title</b>: Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients</p><p><b>type</b>: ECA Rule <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: <a href=\"EvidenceVariable-PopHospitalisedNonICUCOVID19PatientsWITHHighRisk.html\">Population: Hospitalised COVID-19 patients without the need for intensive care therapy considered high-risk for developing venous thrombosis</a></p><p><b>date</b>: 2022-02</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered.</p><blockquote><p><b>goal</b></p><blockquote><p><b>id</b></p>aPTT-goal</blockquote><p><b>category</b>: Lab findings surveillance (regime/therapy) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410394004)</span></p><p><b>description</b>: aPTT value should be &gt; 50 sec. <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>aPTT in Blood by Coagulation assay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#3173-2)</span></td><td>50.0000001-? sec</td></tr></table></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>goalId</b>: aPTT-goal</p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationUFH.html\">Therapeutic Anticoagulation Treatment UFH</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHDalteparin1xd.html\">Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHDalteparin2xd.html\">Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHDalteparinTable.html\">Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHNadroparin.html\">Therapeutic Anticoagulation Treatment with Nadroparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHEnoxaparin1xd.html\">Therapeutic Anticoagulation Treatment with Enoxaparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHEnoxaparin2xd.html\">Therapeutic Anticoagulation Treatment with Enoxaparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHCertoparin.html\">Therapeutic Anticoagulation Treatment with Certoparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationFondaparinux.html\">Therapeutic Anticoagulation Treatment with Fondaparinux</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>goalId</b>: aPTT-goal</p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationWArgatra.html\">Therapeutic Anticoagulation Treatment with Argatroban</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href=\"ActivityDefinition-TherapeuticAnticoagulationNMHTinzaparin.html\">Therapeutic Anticoagulation Treatment with Tinzaparin</a></p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "structured" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-partOf"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/therapeutic-anticoagulation"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/therapeutic-anticoagulation>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "method"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "at-least" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "threshold"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "1"^^xsd:positiveInteger ]
+     ] ) ;
+     fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/therapeutic-anticoagulation"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "7.0"] ; # 
+  fhir:name [ fhir:v "Therapeutic_Anticoagulation_No_Renal_Function_Impairment"] ; # 
+  fhir:title [ fhir:v "Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:subject [
+     fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-non-icu-covid19-patients-high-risk"^^xsd:anyURI ;
+     fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-non-icu-covid19-patients-high-risk>
+  ] ; # 
+  fhir:date [ fhir:v "2022-02"^^xsd:gYearMonth] ; # 
+  fhir:publisher [ fhir:v "NUM CODEX+ CELIDA"] ; # 
+  fhir:description [ fhir:v "In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered."] ; # 
+  fhir:goal ( [
+     fhir:id [ fhir:v "aPTT-goal" ] ;
+     fhir:category [
+       fhir:coding ( [
+         a sct:410394004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "410394004" ] ;
+         fhir:display [ fhir:v "Lab findings surveillance (regime/therapy)" ]
+       ] )
+     ] ;
+     fhir:description [
+       fhir:text [ fhir:v "aPTT value should be > 50 sec." ]
+     ] ;
+     fhir:target ( [
+       fhir:measure [
+         fhir:coding ( [
+           a loinc:3173-2 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "3173-2" ] ;
+           fhir:display [ fhir:v "aPTT in Blood by Coagulation assay" ]
+         ] )
+       ] ;
+       fhir:detail [
+         a fhir:Range ;
+         fhir:low [
+           fhir:value [ fhir:v "50.0000001"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "sec" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "s" ]
+         ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:action ( [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:goalId ( [ fhir:v "aPTT-goal" ] ) ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-UFH-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-UFH-administration>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-1xd"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-1xd>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-2xd"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-2xd>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-table"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-table>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-nadroparin-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-nadroparin-administration>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-1xd"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-1xd>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-2xd"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-2xd>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-certoparin-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-certoparin-administration>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-fondaparinux-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-fondaparinux-administration>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:goalId ( [ fhir:v "aPTT-goal" ] ) ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-argatroban-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-argatroban-administration>
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a sct:432102000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "432102000" ] ;
+         fhir:display [ fhir:v "Administration of substance (procedure)" ]
+       ] )
+     ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-tinzaparin-administration"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-tinzaparin-administration>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="PopHospitalisedICUCOVID19Patients"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: EvidenceVariable</b><a name="PopHospitalisedICUCOVID19Patients"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource EvidenceVariable &quot;PopHospitalisedICUCOVID19Patients&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-recommendation-eligibility-criteria.html">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-icu-covid19-patients-without-thrombembolic-complication</code></p><p><b>identifier</b>: <code>https://www.ceosys.de</code>/HospitalICUCOVID19WOThrombembolic</p><p><b>name</b>: COVID19_ICU_patients_without_thrombembolic complication</p><p><b>title</b>: Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication</p><p><b>status</b>: active</p><p><b>date</b>: 2024-02-27 18:55:16+0000</p><p><b>description</b>: COVID 19 patients without a thrombembolic complication</p><p><b>actual</b>: false</p><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: true</p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: any-of</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: venous-thrombosis</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: pulmonary-embolism</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: atrial-fibrillation</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: covid19</p><p><b>exclude</b>: false</p><h3>DefinitionByTypeAndValues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td>Clinical finding (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#404684003)</span></td><td>Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#840539006)</span></td></tr></table></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: intensive-care-treatment</p><p><b>exclude</b>: false</p><h3>DefinitionByTypeAndValues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td>Episode of care Type <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#78030-4)</span></td><td>Intensivstationär <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-KontaktArtDe.html">KontaktArtDe</a>#intensivstationaer)</span></td></tr></table></blockquote></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-icu-covid19-patients-without-thrombembolic-complication"/>
+  <identifier>
+    <system value="https://www.ceosys.de"/>
+    <value value="HospitalICUCOVID19WOThrombembolic"/>
+  </identifier>
+  <name value="COVID19_ICU_patients_without_thrombembolic complication"/>
+  <title value="Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication"/>
+  <status value="active"/>
+  <date value="2024-02-27T18:55:16+00:00"/>
+  <description value="COVID 19 patients without a thrombembolic complication"/>
+  <actual value="false"/>
+  <characteristic>
+    <exclude value="true"/>
+    <definitionByCombination>
+      <code value="any-of"/>
+      <characteristic>
+        <linkId value="venous-thrombosis"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="404684003"/>
+              <display value="Clinical finding (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="111293003"/>
+              <display value="Venous Thrombosis"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+      <characteristic>
+        <linkId value="pulmonary-embolism"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="404684003"/>
+              <display value="Clinical finding (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="59282003"/>
+              <display value="Pulmonary embolism (disorder)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+      <characteristic>
+        <linkId value="atrial-fibrillation"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="404684003"/>
+              <display value="Clinical finding (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="49436004"/>
+              <display value="Atrial fibrillation (disorder)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+    </definitionByCombination>
+  </characteristic>
+  <characteristic>
+    <linkId value="covid19"/>
+    <exclude value="false"/>
+    <definitionByTypeAndValue>
+      <type>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+      </type>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="840539006"/>
+          <display value="Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+  <characteristic>
+    <linkId value="intensive-care-treatment"/>
+    <exclude value="false"/>
+    <definitionByTypeAndValue>
+      <type>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="78030-4"/>
+          <display value="Episode of care Type"/>
+        </coding>
+      </type>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/kontaktart-de"/>
+          <code value="intensivstationaer"/>
+          <display value="Intensivstationär"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+</EvidenceVariable>

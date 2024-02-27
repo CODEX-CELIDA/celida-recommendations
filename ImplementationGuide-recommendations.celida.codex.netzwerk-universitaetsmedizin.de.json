@@ -1,0 +1,1252 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CELIDARecommendations</h2><p>The official URL for this implementation guide is: </p><pre>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de</pre></div>"
+  },
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+  "version" : "1.5.0-snapshot",
+  "name" : "CELIDARecommendations",
+  "title" : "CODEX+ CELIDA Recommendations",
+  "status" : "draft",
+  "date" : "2024-02-27T18:55:16+00:00",
+  "publisher" : "Universitätsmedizin Greifswald",
+  "contact" : [{
+    "name" : "Universitätsmedizin Greifswald",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizin.uni-greifswald.de/"
+    }]
+  }],
+  "packageId" : "recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r5",
+    "version" : "5.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r5",
+    "version" : "1.0.0"
+  },
+  {
+    "id" : "de_netzwerk_universitaetsmedizin_ebm_cpg",
+    "uri" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/de.netzwerk-universitaetsmedizin.ebm-cpg",
+    "packageId" : "de.netzwerk-universitaetsmedizin.ebm-cpg",
+    "version" : "0.8.0-snapshot"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/PronePositioning"
+      },
+      "name" : "Abdominal Positioning",
+      "description" : "In ARDS and a PaO2/FiO2 < 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/AbdominalPositioningARDSPlan"
+      },
+      "name" : "Abdominal positioning plan in case of ARDS and a PaO2/FiO2 < 150 mmHg",
+      "description" : "In ARDS and a PaO2/FiO2 < 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan"
+      },
+      "name" : "Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication",
+      "description" : "In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWCertoparin"
+      },
+      "name" : "Antithrombotic prophylaxis with Certoparin",
+      "description" : "Antithrombotic prophylaxis with Certoparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWDalteparin"
+      },
+      "name" : "Antithrombotic prophylaxis with Dalteparin",
+      "description" : "Antithrombotic prophylaxis with Dalteparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWEnoxaparin"
+      },
+      "name" : "Antithrombotic prophylaxis with Enoxaparin",
+      "description" : "Antithrombotic prophylaxis with Enoxaparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan"
+      },
+      "name" : "Antithrombotic prophylaxis with Fondaparinux",
+      "description" : "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/AntithromboticProphylaxisFondaparinuxSubcutaneous"
+      },
+      "name" : "Antithrombotic prophylaxis with Fondaparinux",
+      "description" : "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients (when contraindications for LWMH exist)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan"
+      },
+      "name" : "Antithrombotic prophylaxis with LWMH",
+      "description" : "Hospitalized patients with COVID-19 should receive standard drug thromboembolism prophylaxis with low molecular weight heparin in the absence of contraindications. Alternatively, fondaparinux may be used.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWNadroparinHighWeight"
+      },
+      "name" : "Antithrombotic prophylaxis with Nadroparin High Weight",
+      "description" : "Antithrombotic prophylaxis with Nadroparin High Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWNadroparinLowWeight"
+      },
+      "name" : "Antithrombotic prophylaxis with Nadroparin Low Weight",
+      "description" : "Antithrombotic prophylaxis with Nadroparin Low Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWTinzaparin"
+      },
+      "name" : "Antithrombotic prophylaxis with Tinzaparin",
+      "description" : "Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/codex-celida"
+      },
+      "name" : "CODEX-CELIDA",
+      "description" : "Concepts required in recommendations that are not defined elsewhere",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopHospitalisedICUCOVID19Patients"
+      },
+      "name" : "Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication",
+      "description" : "Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/KontaktArtDe"
+      },
+      "name" : "KontaktArtDe",
+      "description" : "Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWArgatra"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Argatroban",
+      "description" : "No Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWCertoparin"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Certoparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Certoparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin1xd"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin2xd"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparinTable"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin1xd"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Enoxaparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin2xd"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Enoxaparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWNadroparin"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Nadroparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Nadroparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWTinzaparin"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with Tinzaparin",
+      "description" : "No Therapeutic Anticoagulation Treatment with Tinzaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/NoTherapeuticAnticoagulationWUFH"
+      },
+      "name" : "No Therapeutic Anticoagulation Treatment with UFH",
+      "description" : "No Therapeutic Anticoagulation Treatment with UFH for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point0"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0 - 0.39",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 043 - 0.49",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point5"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5 - 0.59",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point6"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6 - 0.69",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point7"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7 - 0.79",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point8"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8 - 0.89",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point9"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9 - 0.99",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-1"
+      },
+      "name" : "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0",
+      "description" : "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0 - 1.09",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopHospitalisedCOVID19PatientsWithContraIndications"
+      },
+      "name" : "Population: Hospitalised COVID-19 patients with existing contraindications to LWMH",
+      "description" : "Population for recommendation 15: Hospitalised COVID-19 patients with existing contraindications to LWMH",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications"
+      },
+      "name" : "Population: Hospitalised COVID-19 patients without contraindications to LWMH",
+      "description" : "Population for recommendation 15: Hospitalised COVID-19 patients without contraindications to LWMH",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopHospitalisedNonICUCOVID19PatientsWITHHighRisk"
+      },
+      "name" : "Population: Hospitalised COVID-19 patients without the need for intensive care therapy considered high-risk for developing venous thrombosis",
+      "description" : "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, considered high-risk for developing venous thrombosis",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patientsWithARDS"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients with ARDS",
+      "description" : "Ventilated COVID-19 patients with ARDS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients with severe ARDS",
+      "description" : "Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point0"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point4"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point5"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point6"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point7"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point8"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point9"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-1"
+      },
+      "name" : "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0",
+      "description" : "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 1.0",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "EvidenceVariable"
+      }],
+      "reference" : {
+        "reference" : "EvidenceVariable/PopulationVentilatedARDSPatients"
+      },
+      "name" : "Population: Ventilated patients with ARDS",
+      "description" : "Patients with ARDS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/ProphylacticAnticoagulationWHeparinSC"
+      },
+      "name" : "Prophylactic Anticoagulation Treatment with UFH subcutaneous",
+      "description" : "Prophylactic Treatment with UFH subcutaneous for non-intensive care hospitalised COVID-19 patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19"
+      },
+      "name" : "Recommendation Collection: ICU COVID-19 Patients with No Specific Indication",
+      "description" : "Recommendation Collection for ICU COVID-19 Patients with No Specific Indication",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecommendationCollectionAbdominalPositioningARDS"
+      },
+      "name" : "Recommendation Collection: Patients with ARDS and a PaO2/FiO2 < 150 mmHg",
+      "description" : "Recommendation Collection for Patients with ARDS and a PaO2/FiO2 < 150 mmHg",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients"
+      },
+      "name" : "Recommendation Collection: Prophylactic Anticoagulation in Hospitalized COVID-19 Patients",
+      "description" : "Recommendation Collection for Hospitalized COVID-19 Patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients"
+      },
+      "name" : "Recommendation Collection: Therapeutic Anticoagulation in Non-ICU, High-Risk COVID-19 Patients",
+      "description" : "Recommendation Collection for non-ICU, High-Risk COVID-19 Patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecommendationCollectionVentilatedCOVID19patients"
+      },
+      "name" : "Recommendation Collection: Ventilated COVID-19 Patients",
+      "description" : "Recommendation Collection for Ventilated COVID-19 Patients",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecommendationCollectionVentilatedPatientsWithARDS"
+      },
+      "name" : "Recommendation Collection: Ventilated Patients with ARDS",
+      "description" : "Recommendation Collection for Ventilated Patients with ARDS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/RecommendationCollectionVentilationCOVID19patientsWithARDS"
+      },
+      "name" : "Recommendation Collection: Ventilation Plan for Ventilated COVID-19 patients with ARDS",
+      "description" : "Recommendation Collection for Ventilated COVID-19 patients with ARDS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan"
+      },
+      "name" : "Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients with no renal function impairment (eGFR >= 30ml/min))",
+      "description" : "In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationUFH"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment UFH",
+      "description" : "Therapeutic Anticoagulation Treatment (UFH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationWArgatra"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Argatroban",
+      "description" : "Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHCertoparin"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Certoparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Certoparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin1xd"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin2xd"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparinTable"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Dalteparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin1xd"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Enoxaparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Enoxaparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin2xd"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Enoxaparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Enoxaparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationFondaparinux"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Fondaparinux",
+      "description" : "Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Nadroparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patientswith high risk (D-Dimer >= 2mg/l) with Nadroparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/TherapeuticAnticoagulationNMHTinzaparin"
+      },
+      "name" : "Therapeutic Anticoagulation Treatment with Tinzaparin",
+      "description" : "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Tinzaparin",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedCOVID19PatientsWithARDSVentilationPlan"
+      },
+      "name" : "Ventilation Plan for COVID-19 patients with ARDS",
+      "description" : "In ventilated patients with COVID-19 and ARDS, tidal volume should be ≤ 6 ml/kg standard body weight, end-inspiratory airway pressure ≤ 30 cm H2O.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/VentilatedARDSPatientsInterventionPlan"
+      },
+      "name" : "Ventilation Plan for patients with ARDS",
+      "description" : "We recommend ventilating patients with ARDS with a VT ≤ 6 ml/kg standard body weight (bw). (Table 1, Appendix)",
+      "isExample" : false
+    }],
+    "page" : {
+      "sourceUrl" : "toc.html",
+      "name" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "sourceUrl" : "index.html",
+        "name" : "index.html",
+        "title" : "CELIDA Recommendations",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "downloads.html",
+        "name" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "html"
+      },
+      {
+        "sourceUrl" : "changelog.html",
+        "name" : "changelog.html",
+        "title" : "Change Log",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "copyrightyear"
+      },
+      "value" : "2021+"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "releaselabel"
+      },
+      "value" : "ci-build"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "active-tables"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-contact"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-jurisdiction"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-publisher"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-version"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "show-inherited-invariants"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "usage-stats-opt-out"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludexml"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludejsn"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludettl"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludemap"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludeexample"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "extension-domain"
+      },
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "extension-domain"
+      },
+      "value" : "https://simplifier.net"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "autoload-resources"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/examples"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/extensions"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/models"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/operations"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/profiles"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/maps"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/testing"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/history"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "template/config"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/images"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "template/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "input/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-qa"
+      },
+      "value" : "temp/qa"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-temp"
+      },
+      "value" : "temp/pages"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-output"
+      },
+      "value" : "output"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-tx-cache"
+      },
+      "value" : "input-cache/txcache"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-suppressed-warnings"
+      },
+      "value" : "input/ignoreWarnings.txt"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-history"
+      },
+      "value" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/history.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-html"
+      },
+      "value" : "template-page.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-md"
+      },
+      "value" : "template-page-md.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-context"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-copyright"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-license"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-wg"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "fmm-definition"
+      },
+      "value" : "http://hl7.org/fhir/versions.html#maturity"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "propagate-status"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludelogbinaryformat"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "tabbed-snapshots"
+      },
+      "value" : "true"
+    }]
+  }
+}

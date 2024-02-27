@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition</b><a name="NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PlanDefinition &quot;NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-recommendation-plan.html">Recommendation Plan</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>partOf</b>: <a href="PlanDefinition-RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19.html">Anticoagulation Plan for Population: ICU COVID-19 Patients with No Specific Indication</a></p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: All <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="file:///github/workspace/output/CodeSystem-cs-action-combination-method.html">Action Combination Method</a>#all)</span></p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/no-therapeutic-anticoagulation</code></p><p><b>identifier</b>: TherapeuticAnticoagulationICUCOVID19NoIndication</p><p><b>version</b>: 7.0</p><p><b>name</b>: Anticoagulation_Plan_No_Specific_Indication</p><p><b>title</b>: Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication</p><p><b>type</b>: ECA Rule <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: <a href="EvidenceVariable-PopHospitalisedICUCOVID19Patients.html">Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication</a></p><p><b>date</b>: 2022-02</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given.</p><blockquote><p><b>goal</b></p><blockquote><p><b>id</b></p>aPTT-goal</blockquote><p><b>category</b>: Lab findings surveillance (regime/therapy) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#410394004)</span></p><p><b>description</b>: aPTT value should not be &gt; 50 sec. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td></tr><tr><td style="display: none">*</td><td>aPTT in Blood by Coagulation assay <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#3173-2)</span></td><td>50-? sec</td></tr></table></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>goalId</b>: aPTT-goal</p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWUFH.html">No Therapeutic Anticoagulation Treatment with UFH</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparin1xd.html">No Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparin2xd.html">No Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparinTable.html">No Therapeutic Anticoagulation Treatment with Dalteparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWNadroparin.html">No Therapeutic Anticoagulation Treatment with Nadroparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWEnoxaparin1xd.html">No Therapeutic Anticoagulation Treatment with Enoxaparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWEnoxaparin2xd.html">No Therapeutic Anticoagulation Treatment with Enoxaparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWCertoparin.html">No Therapeutic Anticoagulation Treatment with Certoparin</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>goalId</b>: aPTT-goal</p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWArgatra.html">No Therapeutic Anticoagulation Treatment with Argatroban</a></p></blockquote><blockquote><p><b>action</b></p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>definition</b>: <a href="ActivityDefinition-NoTherapeuticAnticoagulationWTinzaparin.html">No Therapeutic Anticoagulation Treatment with Tinzaparin</a></p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-partOf">
+    <valueCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/no-therapeutic-anticoagulation"/>
+  </extension>
+  <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method">
+    <extension url="method">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"/>
+          <code value="all"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/no-therapeutic-anticoagulation"/>
+  <identifier>
+    <value value="TherapeuticAnticoagulationICUCOVID19NoIndication"/>
+  </identifier>
+  <version value="7.0"/>
+  <name value="Anticoagulation_Plan_No_Specific_Indication"/>
+  <title value="Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <subjectCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-icu-covid19-patients-without-thrombembolic-complication"/>
+  <date value="2022-02"/>
+  <publisher value="NUM CODEX+ CELIDA"/>
+  <description value="In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given."/>
+  <goal id="aPTT-goal">
+    <category>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="410394004"/>
+        <display value="Lab findings surveillance (regime/therapy)"/>
+      </coding>
+    </category>
+    <description>
+      <text value="aPTT value should not be &gt; 50 sec."/>
+    </description>
+    <target>
+      <measure>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="3173-2"/>
+          <display value="aPTT in Blood by Coagulation assay"/>
+        </coding>
+      </measure>
+      <detailRange>
+        <low>
+          <value value="50"/>
+          <unit value="sec"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="s"/>
+        </low>
+      </detailRange>
+    </target>
+  </goal>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <goalId value="aPTT-goal"/>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-UFH-administration"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-1xd"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-2xd"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-table"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-nadroparin-administration"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-enoxaparin-administration-1xd"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-enoxaparin-administration-2xd"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-certoparin-administration"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <goalId value="aPTT-goal"/>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-argatroban-administration"/>
+  </action>
+  <action>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="432102000"/>
+        <display value="Administration of substance (procedure)"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-tinzaparin-administration"/>
+  </action>
+</PlanDefinition>

@@ -1,0 +1,401 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin> a fhir:ActivityDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TherapeuticAnticoagulationNMHNadroparin"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ActivityDefinition</b><a name=\"TherapeuticAnticoagulationNMHNadroparin\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ActivityDefinition &quot;TherapeuticAnticoagulationNMHNadroparin&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-drug-administration-action.html\">Drug Administration Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-nadroparin-administration</code></p><p><b>version</b>: 0.1</p><p><b>name</b>: TherapeuticAnticoagulationPlanNadroparin</p><p><b>title</b>: Therapeutic Anticoagulation Treatment with Nadroparin</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: Patient <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-fhir-types.html\">All FHIR Types</a>#Patient)</span></p><p><b>date</b>: 2024-02-27 18:55:16+0000</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients with high risk (D-Dimer &gt;= 2mg/l) with Nadroparin</p><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>product</b>: Nadroparin (substance) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#699946002; atc#B01AB06 &quot;Nadroparin&quot;)</span></p><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: ?-49.999999</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 50-59.999999 kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 60-69.999999 kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 70-79.999999 kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 80-89.999999 kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 90-? kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "structured" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-nadroparin-administration"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1"] ; # 
+  fhir:name [ fhir:v "TherapeuticAnticoagulationPlanNadroparin"] ; # 
+  fhir:title [ fhir:v "Therapeutic Anticoagulation Treatment with Nadroparin"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:subject [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/fhir-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Patient" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2024-02-27T18:55:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "NUM CODEX+ CELIDA"] ; # 
+  fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients with high risk (D-Dimer >= 2mg/l) with Nadroparin"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:432102000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "432102000" ] ;
+       fhir:display [ fhir:v "Administration of substance (procedure)" ]
+     ] )
+  ] ; # 
+  fhir:product [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:699946002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "699946002" ] ;
+       fhir:display [ fhir:v "Nadroparin (substance)" ]
+     ] [
+       fhir:system [ fhir:v "http://fhir.de/CodeSystem/bfarm/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "B01AB06" ] ;
+       fhir:display [ fhir:v "Nadroparin" ]
+     ] )
+  ] ; # 
+  fhir:dosage ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:high [
+             fhir:value [ fhir:v "49.999999"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "3800"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:low [
+             fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ] ;
+           fhir:high [
+             fhir:value [ fhir:v "59.999999"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "4750"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:low [
+             fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ] ;
+           fhir:high [
+             fhir:value [ fhir:v "69.999999"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "5700"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:low [
+             fhir:value [ fhir:v "70"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ] ;
+           fhir:high [
+             fhir:value [ fhir:v "79.999999"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "6650"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:low [
+             fhir:value [ fhir:v "80"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ] ;
+           fhir:high [
+             fhir:value [ fhir:v "89.999999"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "7600"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a loinc:29463-7 ;
+             fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "29463-7" ] ;
+             fhir:display [ fhir:v "Body weight" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Range ;
+           fhir:low [
+             fhir:value [ fhir:v "90"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "kg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "kg" ]
+           ]
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition"^^xsd:anyURI ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "8550"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "IU" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "[iU]" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

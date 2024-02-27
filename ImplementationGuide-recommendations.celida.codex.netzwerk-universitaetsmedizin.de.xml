@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="recommendations.celida.codex.netzwerk-universitaetsmedizin.de"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CELIDARecommendations</h2><p>The official URL for this implementation guide is: </p><pre>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de</pre></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de"/>
+  <version value="1.5.0-snapshot"/>
+  <name value="CELIDARecommendations"/>
+  <title value="CODEX+ CELIDA Recommendations"/>
+  <status value="draft"/>
+  <date value="2024-02-27T18:55:16+00:00"/>
+  <publisher value="Universitätsmedizin Greifswald"/>
+  <contact>
+    <name value="Universitätsmedizin Greifswald"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizin.uni-greifswald.de/"/>
+    </telecom>
+  </contact>
+  <packageId value="recommendations.celida.codex.netzwerk-universitaetsmedizin.de"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="5.0.0"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r5"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r5"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <dependsOn id="de_netzwerk_universitaetsmedizin_ebm_cpg">
+    <uri value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/de.netzwerk-universitaetsmedizin.ebm-cpg"/>
+    <packageId value="de.netzwerk-universitaetsmedizin.ebm-cpg"/>
+    <version value="0.8.0-snapshot"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/PronePositioning"/>
+      </reference>
+      <name value="Abdominal Positioning"/>
+      <description value="In ARDS and a PaO2/FiO2 &lt; 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/AbdominalPositioningARDSPlan"/>
+      </reference>
+      <name value="Abdominal positioning plan in case of ARDS and a PaO2/FiO2 &lt; 150 mmHg"/>
+      <description value="In ARDS and a PaO2/FiO2 &lt; 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan"/>
+      </reference>
+      <name value="Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication"/>
+      <description value="In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWCertoparin"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Certoparin"/>
+      <description value="Antithrombotic prophylaxis with Certoparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWDalteparin"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Dalteparin"/>
+      <description value="Antithrombotic prophylaxis with Dalteparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWEnoxaparin"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Enoxaparin"/>
+      <description value="Antithrombotic prophylaxis with Enoxaparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Fondaparinux"/>
+      <description value="Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/AntithromboticProphylaxisFondaparinuxSubcutaneous"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Fondaparinux"/>
+      <description value="Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients (when contraindications for LWMH exist)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with LWMH"/>
+      <description value="Hospitalized patients with COVID-19 should receive standard drug thromboembolism prophylaxis with low molecular weight heparin in the absence of contraindications. Alternatively, fondaparinux may be used."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWNadroparinHighWeight"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Nadroparin High Weight"/>
+      <description value="Antithrombotic prophylaxis with Nadroparin High Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWNadroparinLowWeight"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Nadroparin Low Weight"/>
+      <description value="Antithrombotic prophylaxis with Nadroparin Low Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWTinzaparin"/>
+      </reference>
+      <name value="Antithrombotic prophylaxis with Tinzaparin"/>
+      <description value="Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/codex-celida"/>
+      </reference>
+      <name value="CODEX-CELIDA"/>
+      <description value="Concepts required in recommendations that are not defined elsewhere"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopHospitalisedICUCOVID19Patients"/>
+      </reference>
+      <name value="Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication"/>
+      <description value="Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/KontaktArtDe"/>
+      </reference>
+      <name value="KontaktArtDe"/>
+      <description value="Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWArgatra"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Argatroban"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWCertoparin"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Certoparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Certoparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin1xd"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin2xd"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparinTable"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin1xd"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Enoxaparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin2xd"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Enoxaparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWNadroparin"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Nadroparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Nadroparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWTinzaparin"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with Tinzaparin"/>
+      <description value="No Therapeutic Anticoagulation Treatment with Tinzaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/NoTherapeuticAnticoagulationWUFH"/>
+      </reference>
+      <name value="No Therapeutic Anticoagulation Treatment with UFH"/>
+      <description value="No Therapeutic Anticoagulation Treatment with UFH for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point0"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0 - 0.39"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 043 - 0.49"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point5"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5 - 0.59"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point6"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6 - 0.69"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point7"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7 - 0.79"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point8"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8 - 0.89"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point9"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9 - 0.99"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-1"/>
+      </reference>
+      <name value="PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0"/>
+      <description value="PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0 - 1.09"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopHospitalisedCOVID19PatientsWithContraIndications"/>
+      </reference>
+      <name value="Population: Hospitalised COVID-19 patients with existing contraindications to LWMH"/>
+      <description value="Population for recommendation 15: Hospitalised COVID-19 patients with existing contraindications to LWMH"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications"/>
+      </reference>
+      <name value="Population: Hospitalised COVID-19 patients without contraindications to LWMH"/>
+      <description value="Population for recommendation 15: Hospitalised COVID-19 patients without contraindications to LWMH"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopHospitalisedNonICUCOVID19PatientsWITHHighRisk"/>
+      </reference>
+      <name value="Population: Hospitalised COVID-19 patients without the need for intensive care therapy considered high-risk for developing venous thrombosis"/>
+      <description value="Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, considered high-risk for developing venous thrombosis"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patientsWithARDS"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients with ARDS"/>
+      <description value="Ventilated COVID-19 patients with ARDS"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients with severe ARDS"/>
+      <description value="Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point0"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point4"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point5"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point6"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point7"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point8"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point9"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-1"/>
+      </reference>
+      <name value="Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0"/>
+      <description value="Ventilated COVID-19 patients, inspiratory oxygen fraction currently 1.0"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EvidenceVariable"/>
+      </extension>
+      <reference>
+        <reference value="EvidenceVariable/PopulationVentilatedARDSPatients"/>
+      </reference>
+      <name value="Population: Ventilated patients with ARDS"/>
+      <description value="Patients with ARDS"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/ProphylacticAnticoagulationWHeparinSC"/>
+      </reference>
+      <name value="Prophylactic Anticoagulation Treatment with UFH subcutaneous"/>
+      <description value="Prophylactic Treatment with UFH subcutaneous for non-intensive care hospitalised COVID-19 patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19"/>
+      </reference>
+      <name value="Recommendation Collection: ICU COVID-19 Patients with No Specific Indication"/>
+      <description value="Recommendation Collection for ICU COVID-19 Patients with No Specific Indication"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecommendationCollectionAbdominalPositioningARDS"/>
+      </reference>
+      <name value="Recommendation Collection: Patients with ARDS and a PaO2/FiO2 &lt; 150 mmHg"/>
+      <description value="Recommendation Collection for Patients with ARDS and a PaO2/FiO2 &lt; 150 mmHg"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients"/>
+      </reference>
+      <name value="Recommendation Collection: Prophylactic Anticoagulation in Hospitalized COVID-19 Patients"/>
+      <description value="Recommendation Collection for Hospitalized COVID-19 Patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients"/>
+      </reference>
+      <name value="Recommendation Collection: Therapeutic Anticoagulation in Non-ICU, High-Risk COVID-19 Patients"/>
+      <description value="Recommendation Collection for non-ICU, High-Risk COVID-19 Patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecommendationCollectionVentilatedCOVID19patients"/>
+      </reference>
+      <name value="Recommendation Collection: Ventilated COVID-19 Patients"/>
+      <description value="Recommendation Collection for Ventilated COVID-19 Patients"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecommendationCollectionVentilatedPatientsWithARDS"/>
+      </reference>
+      <name value="Recommendation Collection: Ventilated Patients with ARDS"/>
+      <description value="Recommendation Collection for Ventilated Patients with ARDS"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/RecommendationCollectionVentilationCOVID19patientsWithARDS"/>
+      </reference>
+      <name value="Recommendation Collection: Ventilation Plan for Ventilated COVID-19 patients with ARDS"/>
+      <description value="Recommendation Collection for Ventilated COVID-19 patients with ARDS"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients with no renal function impairment (eGFR &gt;= 30ml/min))"/>
+      <description value="In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationUFH"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment UFH"/>
+      <description value="Therapeutic Anticoagulation Treatment (UFH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationWArgatra"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Argatroban"/>
+      <description value="Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHCertoparin"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Certoparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Certoparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin1xd"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin2xd"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparinTable"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Dalteparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin1xd"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Enoxaparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Enoxaparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin2xd"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Enoxaparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Enoxaparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationFondaparinux"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Fondaparinux"/>
+      <description value="Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Nadroparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patientswith high risk (D-Dimer &gt;= 2mg/l) with Nadroparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActivityDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActivityDefinition/TherapeuticAnticoagulationNMHTinzaparin"/>
+      </reference>
+      <name value="Therapeutic Anticoagulation Treatment with Tinzaparin"/>
+      <description value="Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Tinzaparin"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedCOVID19PatientsWithARDSVentilationPlan"/>
+      </reference>
+      <name value="Ventilation Plan for COVID-19 patients with ARDS"/>
+      <description value="In ventilated patients with COVID-19 and ARDS, tidal volume should be ≤ 6 ml/kg standard body weight, end-inspiratory airway pressure ≤ 30 cm H2O."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/VentilatedARDSPatientsInterventionPlan"/>
+      </reference>
+      <name value="Ventilation Plan for patients with ARDS"/>
+      <description value="We recommend ventilating patients with ARDS with a VT ≤ 6 ml/kg standard body weight (bw). (Table 1, Appendix)"/>
+      <isExample value="false"/>
+    </resource>
+    <page>
+      <sourceUrl value="toc.html"/>
+      <name value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <sourceUrl value="index.html"/>
+        <name value="index.html"/>
+        <title value="CELIDA Recommendations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="downloads.html"/>
+        <name value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <sourceUrl value="changelog.html"/>
+        <name value="changelog.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
+      <value value="2021+"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
+      <value value="ci-build"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="active-tables"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-contact"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-jurisdiction"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-publisher"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-version"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="show-inherited-invariants"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="usage-stats-opt-out"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludexml"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludejsn"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludettl"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludemap"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludeexample"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="extension-domain"/>
+      </code>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="extension-domain"/>
+      </code>
+      <value value="https://simplifier.net"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="autoload-resources"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="template/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="input/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-qa"/>
+      </code>
+      <value value="temp/qa"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-temp"/>
+      </code>
+      <value value="temp/pages"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-output"/>
+      </code>
+      <value value="output"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-tx-cache"/>
+      </code>
+      <value value="input-cache/txcache"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-suppressed-warnings"/>
+      </code>
+      <value value="input/ignoreWarnings.txt"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-history"/>
+      </code>
+      <value value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/history.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-html"/>
+      </code>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-md"/>
+      </code>
+      <value value="template-page-md.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-context"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-copyright"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-license"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="fmm-definition"/>
+      </code>
+      <value value="http://hl7.org/fhir/versions.html#maturity"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="propagate-status"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludelogbinaryformat"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="tabbed-snapshots"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

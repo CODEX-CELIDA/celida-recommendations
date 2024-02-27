@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>RECOMMENDATIONS.CELIDA.CODEX.NETZWERK-UNIVERSITAETSMEDIZIN.DE\Artifacts Summary - FHIR v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+  <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/colors.css"/>
+<link rel="stylesheet" href="assets/css/celida.css"/>
+
+
+    <script src="assets/js/fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+  <a no-external="true" id="project-logo" href="https://www.github.com/CODEX-CELIDA/">
+    <img src="assets/images/logo_celida.png" alt="Project home" height="71"/>
+  </a>
+</div>
+
+  <!-- Right logo - for example the FHIR logo -->
+  <!-- Make sure you have authorization to use the FHIR logo -->
+<div id="family-nav">
+  <a no-external="true" id="family-logo" href="https://www.netzwerk-universitaetsmedizin.de">
+    <img src="assets/images/logo_num.svg" alt="FHIR website" height="70"/>
+  </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CODEX+ CELIDA Recommendations</span><br/>1.5.0-snapshot - ci-build</p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changelog.html">Change Log</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">CODEX+ CELIDA Recommendations - Local Development build (v1.5.0-snapshot) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+    <!-- DO NOT EDIT THIS FILE - It is generated and any changes made will be overwritten --><div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir" class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Knowledge Artifacts: Activity Definitions</a>
+      </li>
+      <li>
+         <a href="#2">Knowledge Artifacts: Plan Definitions</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#4">Other</a>
+      </li>
+   </ul>
+</div>
+<div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Knowledge Artifacts: Activity Definitions </h3>
+   <p>
+    <p>These define activities that can be performed as part of content in this implementation guide.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-PronePositioning.html" title="ActivityDefinition/PronePositioning">Abdominal Positioning</a>
+               </td>
+               <td>
+<p>In ARDS and a PaO2/FiO2 &lt; 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWCertoparin.html" title="ActivityDefinition/ProphylacticAnticoagulationWCertoparin">Antithrombotic prophylaxis with Certoparin</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Certoparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWDalteparin.html" title="ActivityDefinition/ProphylacticAnticoagulationWDalteparin">Antithrombotic prophylaxis with Dalteparin</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Dalteparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWEnoxaparin.html" title="ActivityDefinition/ProphylacticAnticoagulationWEnoxaparin">Antithrombotic prophylaxis with Enoxaparin</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Enoxaparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-AntithromboticProphylaxisFondaparinuxSubcutaneous.html" title="ActivityDefinition/AntithromboticProphylaxisFondaparinuxSubcutaneous">Antithrombotic prophylaxis with Fondaparinux</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients (when contraindications for LWMH exist)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWNadroparinHighWeight.html" title="ActivityDefinition/ProphylacticAnticoagulationWNadroparinHighWeight">Antithrombotic prophylaxis with Nadroparin High Weight</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Nadroparin High Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWNadroparinLowWeight.html" title="ActivityDefinition/ProphylacticAnticoagulationWNadroparinLowWeight">Antithrombotic prophylaxis with Nadroparin Low Weight</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Nadroparin Low Weight in hospitalised COVID-19 patients (in absence of contraindications for LWMH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWTinzaparin.html" title="ActivityDefinition/ProphylacticAnticoagulationWTinzaparin">Antithrombotic prophylaxis with Tinzaparin</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWArgatra.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWArgatra">No Therapeutic Anticoagulation Treatment with Argatroban</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWCertoparin.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWCertoparin">No Therapeutic Anticoagulation Treatment with Certoparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Certoparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparin1xd.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin1xd">No Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparin2xd.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin2xd">No Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWDalteparinTable.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWDalteparinTable">No Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWEnoxaparin1xd.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin1xd">No Therapeutic Anticoagulation Treatment with Enoxaparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWEnoxaparin2xd.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin2xd">No Therapeutic Anticoagulation Treatment with Enoxaparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWNadroparin.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWNadroparin">No Therapeutic Anticoagulation Treatment with Nadroparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Nadroparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWTinzaparin.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWTinzaparin">No Therapeutic Anticoagulation Treatment with Tinzaparin</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with Tinzaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-NoTherapeuticAnticoagulationWUFH.html" title="ActivityDefinition/NoTherapeuticAnticoagulationWUFH">No Therapeutic Anticoagulation Treatment with UFH</a>
+               </td>
+               <td>
+<p>No Therapeutic Anticoagulation Treatment with UFH for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-ProphylacticAnticoagulationWHeparinSC.html" title="ActivityDefinition/ProphylacticAnticoagulationWHeparinSC">Prophylactic Anticoagulation Treatment with UFH subcutaneous</a>
+               </td>
+               <td>
+<p>Prophylactic Treatment with UFH subcutaneous for non-intensive care hospitalised COVID-19 patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationUFH.html" title="ActivityDefinition/TherapeuticAnticoagulationUFH">Therapeutic Anticoagulation Treatment UFH</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (UFH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationWArgatra.html" title="ActivityDefinition/TherapeuticAnticoagulationWArgatra">Therapeutic Anticoagulation Treatment with Argatroban</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHCertoparin.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHCertoparin">Therapeutic Anticoagulation Treatment with Certoparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Certoparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHDalteparin1xd.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin1xd">Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHDalteparin2xd.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin2xd">Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHDalteparinTable.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHDalteparinTable">Therapeutic Anticoagulation Treatment with Dalteparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Dalteparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHEnoxaparin1xd.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin1xd">Therapeutic Anticoagulation Treatment with Enoxaparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Enoxaparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHEnoxaparin2xd.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin2xd">Therapeutic Anticoagulation Treatment with Enoxaparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Enoxaparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationFondaparinux.html" title="ActivityDefinition/TherapeuticAnticoagulationFondaparinux">Therapeutic Anticoagulation Treatment with Fondaparinux</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHNadroparin.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin">Therapeutic Anticoagulation Treatment with Nadroparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patientswith high risk (D-Dimer &gt;= 2mg/l) with Nadroparin</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ActivityDefinition-TherapeuticAnticoagulationNMHTinzaparin.html" title="ActivityDefinition/TherapeuticAnticoagulationNMHTinzaparin">Therapeutic Anticoagulation Treatment with Tinzaparin</a>
+               </td>
+               <td>
+<p>Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer &gt;= 2mg/l) with Tinzaparin</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
+   <h3>Knowledge Artifacts: Plan Definitions </h3>
+   <p>
+    <p>These define workflows, rules, strategies, or protocols as part of content in this implementation guide.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-AbdominalPositioningARDSPlan.html" title="PlanDefinition/AbdominalPositioningARDSPlan">Abdominal positioning plan in case of ARDS and a PaO2/FiO2 &lt; 150 mmHg</a>
+               </td>
+               <td>
+<p>In ARDS and a PaO2/FiO2 &lt; 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan.html" title="PlanDefinition/NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan">Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication</a>
+               </td>
+               <td>
+<p>In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan.html" title="PlanDefinition/AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan">Antithrombotic prophylaxis with Fondaparinux</a>
+               </td>
+               <td>
+<p>Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan.html" title="PlanDefinition/AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan">Antithrombotic prophylaxis with LWMH</a>
+               </td>
+               <td>
+<p>Hospitalized patients with COVID-19 should receive standard drug thromboembolism prophylaxis with low molecular weight heparin in the absence of contraindications. Alternatively, fondaparinux may be used.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point0.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point0">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0 - 0.39</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point4.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 043 - 0.49</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point5.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point5">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5 - 0.59</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point6.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point6">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6 - 0.69</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point7.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point7">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7 - 0.79</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point8.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point8">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8 - 0.89</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point9.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point9">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9 - 0.99</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-1.html" title="PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-1">PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0</a>
+               </td>
+               <td>
+<p>PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0 - 1.09</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19.html" title="PlanDefinition/RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19">Recommendation Collection: ICU COVID-19 Patients with No Specific Indication</a>
+               </td>
+               <td>
+<p>Recommendation Collection for ICU COVID-19 Patients with No Specific Indication</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecommendationCollectionAbdominalPositioningARDS.html" title="PlanDefinition/RecommendationCollectionAbdominalPositioningARDS">Recommendation Collection: Patients with ARDS and a PaO2/FiO2 &lt; 150 mmHg</a>
+               </td>
+               <td>
+<p>Recommendation Collection for Patients with ARDS and a PaO2/FiO2 &lt; 150 mmHg</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecCollectionProphAnticoagulationHospitalizedCOVID19Patients.html" title="PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients">Recommendation Collection: Prophylactic Anticoagulation in Hospitalized COVID-19 Patients</a>
+               </td>
+               <td>
+<p>Recommendation Collection for Hospitalized COVID-19 Patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients.html" title="PlanDefinition/RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients">Recommendation Collection: Therapeutic Anticoagulation in Non-ICU, High-Risk COVID-19 Patients</a>
+               </td>
+               <td>
+<p>Recommendation Collection for non-ICU, High-Risk COVID-19 Patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecommendationCollectionVentilatedCOVID19patients.html" title="PlanDefinition/RecommendationCollectionVentilatedCOVID19patients">Recommendation Collection: Ventilated COVID-19 Patients</a>
+               </td>
+               <td>
+<p>Recommendation Collection for Ventilated COVID-19 Patients</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecommendationCollectionVentilatedPatientsWithARDS.html" title="PlanDefinition/RecommendationCollectionVentilatedPatientsWithARDS">Recommendation Collection: Ventilated Patients with ARDS</a>
+               </td>
+               <td>
+<p>Recommendation Collection for Ventilated Patients with ARDS</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-RecommendationCollectionVentilationCOVID19patientsWithARDS.html" title="PlanDefinition/RecommendationCollectionVentilationCOVID19patientsWithARDS">Recommendation Collection: Ventilation Plan for Ventilated COVID-19 patients with ARDS</a>
+               </td>
+               <td>
+<p>Recommendation Collection for Ventilated COVID-19 patients with ARDS</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan.html" title="PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan">Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients with no renal function impairment (eGFR &gt;= 30ml/min))</a>
+               </td>
+               <td>
+<p>In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedCOVID19PatientsWithARDSVentilationPlan.html" title="PlanDefinition/VentilatedCOVID19PatientsWithARDSVentilationPlan">Ventilation Plan for COVID-19 patients with ARDS</a>
+               </td>
+               <td>
+<p>In ventilated patients with COVID-19 and ARDS, tidal volume should be ≤ 6 ml/kg standard body weight, end-inspiratory airway pressure ≤ 30 cm H2O.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="PlanDefinition-VentilatedARDSPatientsInterventionPlan.html" title="PlanDefinition/VentilatedARDSPatientsInterventionPlan">Ventilation Plan for patients with ARDS</a>
+               </td>
+               <td>
+<p>We recommend ventilating patients with ARDS with a VT ≤ 6 ml/kg standard body weight (bw). (Table 1, Appendix)</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
+   <h3>Terminology: Code Systems </h3>
+   <p>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CodeSystem-codex-celida.html" title="CodeSystem/codex-celida">CODEX-CELIDA</a>
+               </td>
+               <td>
+<p>Concepts required in recommendations that are not defined elsewhere</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CodeSystem-KontaktArtDe.html" title="CodeSystem/KontaktArtDe">KontaktArtDe</a>
+               </td>
+               <td>
+<p>Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="4"> </a>
+   <h3>Other </h3>
+   <p>
+    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopHospitalisedICUCOVID19Patients.html" title="EvidenceVariable/PopHospitalisedICUCOVID19Patients">Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication</a>
+               </td>
+               <td>
+<p>Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopHospitalisedCOVID19PatientsWithContraIndications.html" title="EvidenceVariable/PopHospitalisedCOVID19PatientsWithContraIndications">Population: Hospitalised COVID-19 patients with existing contraindications to LWMH</a>
+               </td>
+               <td>
+<p>Population for recommendation 15: Hospitalised COVID-19 patients with existing contraindications to LWMH</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopHospitalisedCOVID19PatientsWOContraIndications.html" title="EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications">Population: Hospitalised COVID-19 patients without contraindications to LWMH</a>
+               </td>
+               <td>
+<p>Population for recommendation 15: Hospitalised COVID-19 patients without contraindications to LWMH</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopHospitalisedNonICUCOVID19PatientsWITHHighRisk.html" title="EvidenceVariable/PopHospitalisedNonICUCOVID19PatientsWITHHighRisk">Population: Hospitalised COVID-19 patients without the need for intensive care therapy considered high-risk for developing venous thrombosis</a>
+               </td>
+               <td>
+<p>Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, considered high-risk for developing venous thrombosis</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patientsWithARDS.html" title="EvidenceVariable/PopulationVentilatedCOVID19patientsWithARDS">Population: Ventilated COVID-19 Patients with ARDS</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients with ARDS</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure.html" title="EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure">Population: Ventilated COVID-19 Patients with severe ARDS</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point0.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point0">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point4.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point4">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point5.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point5">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point6.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point6">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point7.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point7">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point8.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point8">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point9.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point9">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-1.html" title="EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-1">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0</a>
+               </td>
+               <td>
+<p>Ventilated COVID-19 patients, inspiratory oxygen fraction currently 1.0</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="EvidenceVariable-PopulationVentilatedARDSPatients.html" title="EvidenceVariable/PopulationVentilatedARDSPatients">Population: Ventilated patients with ARDS</a>
+               </td>
+               <td>
+<p>Patients with ARDS</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+</div>
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2021+ <a href="https://www.medizin.uni-greifswald.de/">Universitätsmedizin Greifswald</a>.  Package recommendations.celida.codex.netzwerk-universitaetsmedizin.de#1.5.0-snapshot based on <a href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Tue, Feb 27, 2024 18:55+0000">2024-02-27</span>
+          <br/>
+          <span style="color: #FFFF77">
+            <p style="color: white"><a name="l1468">​</a>
+       Links: <a href="toc.html">Table of Contents</a> |
+       <a href="qa.html">QA Report</a> |
+       <a href="https://github.com/CODEX-CELIDA/recommendations.celida.codex.netzwerk-universitaetsmedizin.de/issues/" target="_blank">Issues</a> |
+       <a href="https://github.com/CODEX-CELIDA/recommendations.celida.codex.netzwerk-universitaetsmedizin.de/issues/new" target="_blank">Submit an issue</a> |
+       <a href="http://hl7.org/fhir/R5//history.html" target="_blank">Version History</a> |
+       <a rel="license" href="http://hl7.org/fhir/R5/license.html"><img src="assets/images/cc-by.svg" alt="CC-BY" style="border-style: none;" height="17"/></a> |
+</p>
+
+<script src="assets/js/imageMapResizer.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+       imageMapResize();
+</script>
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+
+    <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

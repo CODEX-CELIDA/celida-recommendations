@@ -1,0 +1,130 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications> a fhir:EvidenceVariable ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PopHospitalisedCOVID19PatientsWOContraIndications"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: EvidenceVariable</b><a name=\"PopHospitalisedCOVID19PatientsWOContraIndications\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource EvidenceVariable &quot;PopHospitalisedCOVID19PatientsWOContraIndications&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation-eligibility-criteria.html\">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-no-LMWH-contraindications</code></p><p><b>identifier</b>: <code>https://www.ceosys.de</code>/WithoutContraIndications</p><p><b>name</b>: COVID19_patients_without_contraindications</p><p><b>title</b>: Population: Hospitalised COVID-19 patients without contraindications to LWMH</p><p><b>status</b>: active</p><p><b>date</b>: 2024-02-27 18:55:16+0000</p><p><b>description</b>: Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without contraindications to LWMH</p><p><b>actual</b>: false</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: covid19</p><p><b>exclude</b>: false</p><h3>DefinitionByTypeAndValues</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Clinical finding (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#404684003)</span></td><td>Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#840539006)</span></td></tr></table></blockquote><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: true</p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: any-of</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: hit2</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: heparin-allergy</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: heparinoid-allergy</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-no-LMWH-contraindications"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.ceosys.de"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "WithoutContraIndications" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "COVID19_patients_without_contraindications"] ; # 
+  fhir:title [ fhir:v "Population: Hospitalised COVID-19 patients without contraindications to LWMH"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-02-27T18:55:16+00:00"^^xsd:dateTime] ; # 
+  fhir:description [ fhir:v "Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without contraindications to LWMH"] ; # 
+  fhir:actual [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:characteristic ( [
+     fhir:linkId [ fhir:v "covid19" ] ;
+     fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:definitionByTypeAndValue [
+       fhir:type [
+         fhir:coding ( [
+           a sct:404684003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "404684003" ] ;
+           fhir:display [ fhir:v "Clinical finding (finding)" ]
+         ] )
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:840539006 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "840539006" ] ;
+           fhir:display [ fhir:v "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+         ] )
+       ]
+     ]
+  ] [
+     fhir:exclude [ fhir:v "true"^^xsd:boolean ] ;
+     fhir:definitionByCombination [
+       fhir:code [ fhir:v "any-of" ] ;
+       fhir:characteristic ( [
+         fhir:linkId [ fhir:v "hit2" ] ;
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:404684003 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "404684003" ] ;
+               fhir:display [ fhir:v "Clinical finding (finding)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:111588002 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "111588002" ] ;
+               fhir:display [ fhir:v "Heparin-induced thrombocytopenia with thrombosis (disorder)" ]
+             ] )
+           ]
+         ]
+       ] [
+         fhir:linkId [ fhir:v "heparin-allergy" ] ;
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:609328004 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "609328004" ] ;
+               fhir:display [ fhir:v "Allergic disposition (finding)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:294872001 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "294872001" ] ;
+               fhir:display [ fhir:v "Allergy to heparin (finding)" ]
+             ] )
+           ]
+         ]
+       ] [
+         fhir:linkId [ fhir:v "heparinoid-allergy" ] ;
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:609328004 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "609328004" ] ;
+               fhir:display [ fhir:v "Allergic disposition (finding)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:294876003 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "294876003" ] ;
+               fhir:display [ fhir:v "Allergy to heparinoid (finding)" ]
+             ] )
+           ]
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

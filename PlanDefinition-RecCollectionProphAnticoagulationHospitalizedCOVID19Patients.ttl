@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "RecCollectionProphAnticoagulationHospitalizedCOVID19Patients"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"RecCollectionProphAnticoagulationHospitalizedCOVID19Patients\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;RecCollectionProphAnticoagulationHospitalizedCOVID19Patients&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation.html\">Recommendation</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: Exactly <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"file:///github/workspace/output/CodeSystem-cs-action-combination-method.html\">Action Combination Method</a>#exactly)</span></p><blockquote><p><b>url</b></p><code>threshold</code></blockquote><p><b>value</b>: 1</p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/prophylactic-anticoagulation</code></p><p><b>version</b>: 1.0</p><p><b>name</b>: RecommendationCollection15</p><p><b>title</b>: Prophylactic Anticoagulation for Population: Hospitalized COVID-19 Patients</p><p><b>type</b>: Workflow Definition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#workflow-definition)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-02-14</p><p><b>publisher</b>: Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)</p><p><b>description</b>: Hospitalisierte Patienten mit COVID-19 sollen in Abwesenheit von Kontraindikationen eine standardmäßige medikamentöse Thromboembolieprophylaxe mit niedermolekularem Heparin erhalten. Alternativ kann Fondaparinux zur Anwendung kommen.</p><blockquote><p><b>action</b></p><p><b>title</b>: AntithromboticProphylaxisWithLWMH</p><p><b>description</b>: Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>selectionBehavior</b>: one-or-more</p><p><b>definition</b>: <a href=\"PlanDefinition-AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan.html\">Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: AntithromboticProphylaxisWithFondaparinux</p><p><b>description</b>: Antithrombotic prophylaxis with Fondaparinux</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>selectionBehavior</b>: one-or-more</p><p><b>definition</b>: <a href=\"PlanDefinition-AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan.html\">Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients</a></p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "structured" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "method"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "exactly" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "threshold"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "1"^^xsd:positiveInteger ]
+     ] ) ;
+     fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/prophylactic-anticoagulation"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0"] ; # 
+  fhir:name [ fhir:v "RecommendationCollection15"] ; # 
+  fhir:title [ fhir:v "Prophylactic Anticoagulation for Population: Hospitalized COVID-19 Patients"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "workflow-definition" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2022-02-14"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)"] ; # 
+  fhir:description [ fhir:v "Hospitalisierte Patienten mit COVID-19 sollen in Abwesenheit von Kontraindikationen eine standardmäßige medikamentöse Thromboembolieprophylaxe mit niedermolekularem Heparin erhalten. Alternativ kann Fondaparinux zur Anwendung kommen."] ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "AntithromboticProphylaxisWithLWMH" ] ;
+     fhir:description [ fhir:v "Antithrombotic prophylaxis with LWMH in hospitalised COVID-19 patients" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:selectionBehavior [ fhir:v "one-or-more" ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-LMWH"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-LMWH>
+     ]
+  ] [
+     fhir:title [ fhir:v "AntithromboticProphylaxisWithFondaparinux" ] ;
+     fhir:description [ fhir:v "Antithrombotic prophylaxis with Fondaparinux" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ;
+     fhir:selectionBehavior [ fhir:v "one-or-more" ] ;
+     fhir:definition [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-fondaparinux"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-fondaparinux>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
