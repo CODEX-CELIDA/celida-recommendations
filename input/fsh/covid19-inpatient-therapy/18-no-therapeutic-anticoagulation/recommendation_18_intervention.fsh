@@ -88,7 +88,7 @@ Description: "No Therapeutic Anticoagulation Treatment with UFH for non-intensiv
       * periodUnit = $ucum#d "day"
   * doseAndRate
     * doseRange
-      * low = 0 '[iU]' "IU" // any dose of i.v. Argatroban
+      * low = 0.00001 '[iU]' "IU" // any dose of i.v. Argatroban
 * doNotPerform = true
 
 Instance: NoTherapeuticAnticoagulationWDalteparin1xd
@@ -405,7 +405,7 @@ Description: "No Therapeutic Anticoagulation Treatment with Argatroban for non-i
       * periodUnit = $ucum#d "day"
   * doseAndRate
     * doseRange
-      * low = 0 '[iU]' "IU" // any dose of i.v. Argatroban
+      * low = 0.00001 '[iU]' "IU" // any dose of i.v. Argatroban
 * doNotPerform = true
 
 Instance: NoTherapeuticAnticoagulationWTinzaparin
