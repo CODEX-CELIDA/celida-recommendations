@@ -1,0 +1,3 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhir.de/CodeSystem/kontaktart-de,1.5.0,active,,KontaktArtDe,KontaktArtDe,"Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung",
+https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/CodeSystem/codex-celida,null,draft,,CODEX_CELIDA,CODEX-CELIDA,"Concepts required in recommendations that are not defined elsewhere",

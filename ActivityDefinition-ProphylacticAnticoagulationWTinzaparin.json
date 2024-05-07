@@ -1,0 +1,78 @@
+{
+  "resourceType" : "ActivityDefinition",
+  "id" : "ProphylacticAnticoagulationWTinzaparin",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ActivityDefinition</b><a name=\"ProphylacticAnticoagulationWTinzaparin\"> </a><a name=\"hcProphylacticAnticoagulationWTinzaparin\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ActivityDefinition &quot;ProphylacticAnticoagulationWTinzaparin&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-drug-administration-action.html\">Drug Administration Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-tinzaparin-administration</code></p><p><b>version</b>: 0.1</p><p><b>name</b>: ProphylacticTinzaparinApplicationActivity</p><p><b>title</b>: Antithrombotic prophylaxis with Tinzaparin</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: Patient <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R5/codesystem-fhir-types.html\">All FHIR Types</a>#Patient)</span></p><p><b>date</b>: 2024-05-07 19:48:55+0000</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients</p><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: Administration of substance (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#432102000)</span></p><p><b>product</b>: Tinzaparin (substance) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#412608008; atc#B01AB10 &quot;Tinzaparin&quot;)</span></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueCode" : "structured"
+  }],
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-tinzaparin-administration",
+  "version" : "0.1",
+  "name" : "ProphylacticTinzaparinApplicationActivity",
+  "title" : "Antithrombotic prophylaxis with Tinzaparin",
+  "status" : "active",
+  "experimental" : true,
+  "subjectCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/fhir-types",
+      "code" : "Patient"
+    }]
+  },
+  "date" : "2024-05-07T19:48:55+00:00",
+  "publisher" : "NUM CODEX+ CELIDA",
+  "description" : "Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients",
+  "kind" : "MedicationRequest",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "432102000",
+      "display" : "Administration of substance (procedure)"
+    }]
+  },
+  "productCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "412608008",
+      "display" : "Tinzaparin (substance)"
+    },
+    {
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "B01AB10",
+      "display" : "Tinzaparin"
+    }]
+  },
+  "dosage" : [{
+    "timing" : {
+      "repeat" : {
+        "frequency" : 1,
+        "period" : 1,
+        "periodUnit" : "d"
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "34206005",
+        "display" : "Subcutaneous route (qualifier value)"
+      }]
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 3500,
+        "unit" : "IU",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "[iU]"
+      }
+    }]
+  }]
+}

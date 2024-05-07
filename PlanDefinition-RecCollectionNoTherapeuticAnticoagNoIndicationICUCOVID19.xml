@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition</b><a name="RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19"> </a><a name="hcRecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PlanDefinition &quot;RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-recommendation.html">Recommendation</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: Exactly <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="file:///github/workspace/output/CodeSystem-cs-action-combination-method.html">Action Combination Method</a>#exactly)</span></p><blockquote><p><b>url</b></p><code>threshold</code></blockquote><p><b>value</b>: 1</p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/no-therapeutic-anticoagulation</code></p><p><b>version</b>: 1.0</p><p><b>name</b>: RecommendationCollection18</p><p><b>title</b>: Anticoagulation Plan for Population: ICU COVID-19 Patients with No Specific Indication</p><p><b>type</b>: Workflow Definition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#workflow-definition)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-02-14</p><p><b>publisher</b>: Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)</p><p><b>description</b>: Bei Intensivpatienten ohne spezifische Indikation (z.B. Lungenembolien) sollte eine therapeutische Antikoagulation nicht erfolgen.</p><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Definition[x]</b></td></tr><tr><td style="display: none">*</td><td>Anticoagulation_Plan_No_Specific_Indication</td><td>Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication</td><td>Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></td><td><a href="PlanDefinition-NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan.html">Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method">
+    <extension url="method">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"/>
+          <code value="exactly"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="threshold">
+      <valuePositiveInt value="1"/>
+    </extension>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/no-therapeutic-anticoagulation"/>
+  <version value="1.0"/>
+  <name value="RecommendationCollection18"/>
+  <title value="Anticoagulation Plan for Population: ICU COVID-19 Patients with No Specific Indication"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="workflow-definition"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2022-02-14"/>
+  <publisher value="Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)"/>
+  <description value="Bei Intensivpatienten ohne spezifische Indikation (z.B. Lungenembolien) sollte eine therapeutische Antikoagulation nicht erfolgen."/>
+  <action>
+    <title value="Anticoagulation_Plan_No_Specific_Indication"/>
+    <description value="Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="guideline-based-care"/>
+      </coding>
+    </code>
+    <definitionCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/no-therapeutic-anticoagulation"/>
+  </action>
+</PlanDefinition>

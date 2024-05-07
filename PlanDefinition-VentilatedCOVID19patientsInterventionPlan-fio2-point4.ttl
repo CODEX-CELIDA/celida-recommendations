@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "VentilatedCOVID19patientsInterventionPlan-fio2-point4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-plan>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"VentilatedCOVID19patientsInterventionPlan-fio2-point4\"> </a><a name=\"hcVentilatedCOVID19patientsInterventionPlan-fio2-point4\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;VentilatedCOVID19patientsInterventionPlan-fio2-point4&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation-plan.html\">Recommendation Plan</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>partOf</b>: <a href=\"PlanDefinition-RecommendationCollectionVentilatedCOVID19patients.html\">PEEP Intervention for Population: Ventilated COVID-19 Patients</a></p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: All <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"file:///github/workspace/output/CodeSystem-cs-action-combination-method.html\">Action Combination Method</a>#all)</span></p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point4</code></p><p><b>identifier</b>: PEEPPlanCOVIDPatients_OxygenFraction-0.4</p><p><b>version</b>: 7.0</p><p><b>name</b>: PEEP_Intervention_Plan_FiO2_0.4</p><p><b>title</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49</p><p><b>type</b>: ECA Rule <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: <a href=\"EvidenceVariable-PopulationVentilatedCOVID19patients-fio2-point4.html\">Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4</a></p><p><b>date</b>: 2022-02</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4 - 0.49</p><blockquote><p><b>goal</b></p><blockquote><p><b>id</b></p>ventilator-management-fio2-0.4-goal</blockquote><p><b>category</b>: Ventilator care and adjustment (regime/therapy) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#385857005)</span></p><p><b>description</b>: Positive end-expiratory pressure (PEEP) minimal value setting for COVID-19 Patients, inspiratory oxygen fraction currently 0.4 - 0.49 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>PEEP Respiratory system --on ventilator <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#76248-4)</span></td><td>5-? cm[H2O]</td></tr></table></blockquote><h3>Actions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>GoalId</b></td></tr><tr><td style=\"display: none\">*</td><td>Ventilator care management (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410210009)</span></td><td>ventilator-management-fio2-0.4-goal</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "structured" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-partOf"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-ventilation-plan-peep"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-ventilation-plan-peep>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "method"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "all" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point4"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "PEEPPlanCOVIDPatients_OxygenFraction-0.4" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "7.0"] ; # 
+  fhir:name [ fhir:v "PEEP_Intervention_Plan_FiO2_0.4"] ; # 
+  fhir:title [ fhir:v "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:subject [
+     fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point4"^^xsd:anyURI ;
+     fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point4>
+  ] ; # 
+  fhir:date [ fhir:v "2022-02"^^xsd:gYearMonth] ; # 
+  fhir:publisher [ fhir:v "NUM CODEX+ CELIDA"] ; # 
+  fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4 - 0.49"] ; # 
+  fhir:goal ( [
+     fhir:id [ fhir:v "ventilator-management-fio2-0.4-goal" ] ;
+     fhir:category [
+       fhir:coding ( [
+         a sct:385857005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "385857005" ] ;
+         fhir:display [ fhir:v "Ventilator care and adjustment (regime/therapy)" ]
+       ] )
+     ] ;
+     fhir:description [
+       fhir:text [ fhir:v "Positive end-expiratory pressure (PEEP) minimal value setting for COVID-19 Patients, inspiratory oxygen fraction currently 0.4 - 0.49" ]
+     ] ;
+     fhir:target ( [
+       fhir:measure [
+         fhir:coding ( [
+           a loinc:76248-4 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "76248-4" ] ;
+           fhir:display [ fhir:v "PEEP Respiratory system --on ventilator" ]
+         ] )
+       ] ;
+       fhir:detail [
+         a fhir:Range ;
+         fhir:low [
+           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "cm[H2O]" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "cm[H2O]" ]
+         ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:action ( [
+     fhir:code [
+       fhir:coding ( [
+         a sct:410210009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "410210009" ] ;
+         fhir:display [ fhir:v "Ventilator care management (procedure)" ]
+       ] )
+     ] ;
+     fhir:goalId ( [ fhir:v "ventilator-management-fio2-0.4-goal" ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

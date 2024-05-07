@@ -1,0 +1,476 @@
+[
+  {
+    "id" : "KontaktArtDe",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.de/CodeSystem/kontaktart-de",
+    "version" : "1.5.0",
+    "name" : "KontaktArtDe"
+  },
+  {
+    "id" : "codex-celida",
+    "type" : "CodeSystem",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/CodeSystem/codex-celida",
+    "name" : "CODEX_CELIDA"
+  },
+  {
+    "id" : "recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+    "type" : "ImplementationGuide",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+    "version" : "1.5.1-snapshot",
+    "name" : "CELIDARecommendations"
+  },
+  {
+    "id" : "AbdominalPositioningARDSPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/abdominal-positioning-ARDS-plan",
+    "version" : "7.0",
+    "name" : "Abdominal_Positioning_Plan_In_Case_Of_ARDS_And_PaO2/FiO2_<_150mmHg"
+  },
+  {
+    "id" : "AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-LMWH",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithLWMH"
+  },
+  {
+    "id" : "AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/antithrombotic-prophylaxis-fondaparinux",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithFondaparinux"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/no-therapeutic-anticoagulation",
+    "version" : "7.0",
+    "name" : "Anticoagulation_Plan_No_Specific_Indication"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-1",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-1",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_1.0"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point0",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point0",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.3"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point4",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point4",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.4"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point5",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point5",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.5"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point6",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point6",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.6"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point7",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point7",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.7"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point8",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point8",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.8"
+  },
+  {
+    "id" : "VentilatedCOVID19patientsInterventionPlan-fio2-point9",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point9",
+    "version" : "7.0",
+    "name" : "PEEP_Intervention_Plan_FiO2_0.9"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/therapeutic-anticoagulation",
+    "version" : "7.0",
+    "name" : "Therapeutic_Anticoagulation_No_Renal_Function_Impairment"
+  },
+  {
+    "id" : "VentilatedCOVID19PatientsWithARDSVentilationPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/ventilation-plan",
+    "version" : "7.0",
+    "name" : "Ventilation_Plan"
+  },
+  {
+    "id" : "PopHospitalisedCOVID19PatientsWOContraIndications",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-no-LMWH-contraindications",
+    "name" : "COVID19_patients_without_contraindications"
+  },
+  {
+    "id" : "PopHospitalisedCOVID19PatientsWithContraIndications",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-with-LMWH-contraindications",
+    "name" : "COVID19_patients_with_contraindications"
+  },
+  {
+    "id" : "PopHospitalisedICUCOVID19Patients",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-icu-covid19-patients-without-thrombembolic-complication",
+    "name" : "COVID19_ICU_patients_without_thrombembolic complication"
+  },
+  {
+    "id" : "PopHospitalisedNonICUCOVID19PatientsWITHHighRisk",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-non-icu-covid19-patients-high-risk",
+    "name" : "COVID19_patients_NOT_ICU_with_high_risk"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-1",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-1",
+    "name" : "Population_COVID19_Ventilated_FiO2_1.0"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point0",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point0",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.0"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point4",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point4",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.4"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point5",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point5",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.5"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point6",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point6",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.6"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point7",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point7",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.7"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point8",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point8",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.8"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patients-fio2-point9",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-fio2-point9",
+    "name" : "Population_COVID19_Ventilated_FiO2_0.9"
+  },
+  {
+    "id" : "PopulationVentilatedCOVID19patientsWithARDS",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-with-ards",
+    "name" : "Population_COVID19_Ventilated_With_ARDS"
+  },
+  {
+    "id" : "PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-with-ards-with-oxygenation-failure",
+    "name" : "Population_COVID19_Ventilated_With_severe_ARDS"
+  },
+  {
+    "id" : "RecommendationCollectionAbdominalPositioningARDS",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-abdominal-positioning-ards",
+    "version" : "1.0",
+    "name" : "RecommendationCollection36b"
+  },
+  {
+    "id" : "RecommendationCollectionVentilatedCOVID19patients",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-ventilation-plan-peep",
+    "version" : "1.0",
+    "name" : "RecommendationCollection36-a"
+  },
+  {
+    "id" : "RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/no-therapeutic-anticoagulation",
+    "version" : "1.0",
+    "name" : "RecommendationCollection18"
+  },
+  {
+    "id" : "RecCollectionProphAnticoagulationHospitalizedCOVID19Patients",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/prophylactic-anticoagulation",
+    "version" : "1.0",
+    "name" : "RecommendationCollection15"
+  },
+  {
+    "id" : "RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/therapeutic-anticoagulation",
+    "version" : "1.0",
+    "name" : "RecommendationCollection17"
+  },
+  {
+    "id" : "RecommendationCollectionVentilationCOVID19patientsWithARDS",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/ventilation-plan-ards-tidal-volume",
+    "version" : "1.0",
+    "name" : "RecommendationCollection35"
+  },
+  {
+    "id" : "PronePositioning",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/body-positioning-action/abdominal-positioning-ARDS",
+    "version" : "7.0",
+    "name" : "PronePositioning"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWCertoparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-certoparin-administration",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithCertoparinPlan"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWDalteparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-dalteparin-administration",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithDalteparinPlan"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWEnoxaparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-enoxaparin-administration",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithEnoxaparinPlan"
+  },
+  {
+    "id" : "AntithromboticProphylaxisFondaparinuxSubcutaneous",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-fondaparinux-administration",
+    "version" : "0.1",
+    "name" : "ProphylacticFondaparinuxApplicationActivity"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWHeparinSC",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-heparin-subcutaneous-administration",
+    "version" : "0.1",
+    "name" : "ProphylacticAnticoagulationPlanUFHsc"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWNadroparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-nadroparin-administration",
+    "version" : "0.1",
+    "name" : "AntithromboticProphylaxisWithPlanNadroparin"
+  },
+  {
+    "id" : "ProphylacticAnticoagulationWTinzaparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/antithrombotic-prophylaxis-tinzaparin-administration",
+    "version" : "0.1",
+    "name" : "ProphylacticTinzaparinApplicationActivity"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWUFH",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-UFH-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanUFH"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWArgatra",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-argatroban-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanArgatroban"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWCertoparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-certoparin-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanCertoparin"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWDalteparin1xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-1xd",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWDalteparin2xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-2xd",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWDalteparinTable",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-dalteparin-administration-table",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWEnoxaparin1xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-enoxaparin-administration-1xd",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanEnoxaparin"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWEnoxaparin2xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-enoxaparin-administration-2xd",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanEnoxaparin"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationFondaparinux",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-fondaparinux-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanFondaparinux"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWNadroparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-nadroparin-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanNadroparin"
+  },
+  {
+    "id" : "NoTherapeuticAnticoagulationWTinzaparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/no-therapeutic-anticoagulant-tinzaparin-administration",
+    "version" : "0.1",
+    "name" : "NoTherapeuticAnticoagulationPlanTinzaparin"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationUFH",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-UFH-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanUFH"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationWArgatra",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-argatroban-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanArgatroban"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHCertoparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-certoparin-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanCertoparin"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHDalteparin1xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-1xd",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHDalteparin2xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-2xd",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHDalteparinTable",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-dalteparin-administration-table",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationDalteparinPlan"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHEnoxaparin1xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-1xd",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanEnoxaparin"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHEnoxaparin2xd",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-enoxaparin-administration-2xd",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanEnoxaparin"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationFondaparinux",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-fondaparinux-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanFondaparinux"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHNadroparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-nadroparin-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanNadroparin"
+  },
+  {
+    "id" : "TherapeuticAnticoagulationNMHTinzaparin",
+    "type" : "ActivityDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-tinzaparin-administration",
+    "version" : "0.1",
+    "name" : "TherapeuticAnticoagulationPlanTinzaparin"
+  },
+  {
+    "id" : "VentilatedARDSPatientsInterventionPlan",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/sepsis/intervention-plan/ventilation-ARDS-plan",
+    "version" : "7.0",
+    "name" : "Ventilation_Plan_ARDS"
+  },
+  {
+    "id" : "PopulationVentilatedARDSPatients",
+    "type" : "EvidenceVariable",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/sepsis/population/ventilated-patients-with-ards",
+    "name" : "Population_Ventilated_Patients_With_ARDS"
+  },
+  {
+    "id" : "RecommendationCollectionVentilatedPatientsWithARDS",
+    "type" : "PlanDefinition",
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/sepsis/recommendation/ventilation-plan-ards-tidal-volume",
+    "version" : "1.0",
+    "name" : "RecommendationCollectionM1"
+  }
+]

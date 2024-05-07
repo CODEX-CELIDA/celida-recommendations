@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="TherapeuticAnticoagulationFondaparinux"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/drug-administration-action"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ActivityDefinition</b><a name="TherapeuticAnticoagulationFondaparinux"> </a><a name="hcTherapeuticAnticoagulationFondaparinux"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ActivityDefinition &quot;TherapeuticAnticoagulationFondaparinux&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-drug-administration-action.html">Drug Administration Action</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-fondaparinux-administration</code></p><p><b>version</b>: 0.1</p><p><b>name</b>: TherapeuticAnticoagulationPlanFondaparinux</p><p><b>title</b>: Therapeutic Anticoagulation Treatment with Fondaparinux</p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>subject</b>: Patient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/R5/codesystem-fhir-types.html">All FHIR Types</a>#Patient)</span></p><p><b>date</b>: 2024-05-07 19:48:55+0000</p><p><b>publisher</b>: NUM CODEX+ CELIDA</p><p><b>description</b>: Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)</p><p><b>kind</b>: MedicationRequest</p><p><b>code</b>: Administration of substance (procedure) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#432102000)</span></p><p><b>product</b>: Fondaparinux (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#708189008; atc#B01AX05)</span></p><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: ?-49.999999</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 50-100 kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dosage</b></p><blockquote><p><b>Dosage Condition</b></p><blockquote><p><b>url</b></p><code>type</code></blockquote><p><b>value</b>: Body weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7)</span></p><blockquote><p><b>url</b></p><code>value</code></blockquote><p><b>value</b>: 100.00001-? kg</p></blockquote><p><b>timing</b>: Once per 1 days</p><p><b>route</b>: Subcutaneous route (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#34206005)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel">
+    <valueCode value="structured"/>
+  </extension>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommended-action/drug-administration-action/therapeutic-anticoagulant-fondaparinux-administration"/>
+  <version value="0.1"/>
+  <name value="TherapeuticAnticoagulationPlanFondaparinux"/>
+  <title value="Therapeutic Anticoagulation Treatment with Fondaparinux"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <subjectCodeableConcept>
+    <coding>
+      <system value="http://hl7.org/fhir/fhir-types"/>
+      <code value="Patient"/>
+    </coding>
+  </subjectCodeableConcept>
+  <date value="2024-05-07T19:48:55+00:00"/>
+  <publisher value="NUM CODEX+ CELIDA"/>
+  <description value="Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)"/>
+  <kind value="MedicationRequest"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="432102000"/>
+      <display value="Administration of substance (procedure)"/>
+    </coding>
+  </code>
+  <productCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="708189008"/>
+      <display value="Fondaparinux (substance)"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="B01AX05"/>
+      <display value="Fondaparinux (substance)"/>
+    </coding>
+  </productCodeableConcept>
+  <dosage>
+    <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition">
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+            <display value="Body weight"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="value">
+        <valueRange>
+          <high>
+            <value value="49.999999"/>
+            <unit value="kg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="kg"/>
+          </high>
+        </valueRange>
+      </extension>
+    </extension>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34206005"/>
+        <display value="Subcutaneous route (qualifier value)"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="5"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+  <dosage>
+    <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition">
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+            <display value="Body weight"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="value">
+        <valueRange>
+          <low>
+            <value value="50"/>
+            <unit value="kg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="kg"/>
+          </low>
+          <high>
+            <value value="100"/>
+            <unit value="kg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="kg"/>
+          </high>
+        </valueRange>
+      </extension>
+    </extension>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34206005"/>
+        <display value="Subcutaneous route (qualifier value)"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="7.5"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+  <dosage>
+    <extension url="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-dosage-condition">
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+            <display value="Body weight"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="value">
+        <valueRange>
+          <low>
+            <value value="100.00001"/>
+            <unit value="kg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="kg"/>
+          </low>
+        </valueRange>
+      </extension>
+    </extension>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34206005"/>
+        <display value="Subcutaneous route (qualifier value)"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="10"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+</ActivityDefinition>

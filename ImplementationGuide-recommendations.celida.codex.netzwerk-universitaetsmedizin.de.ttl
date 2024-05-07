@@ -1,0 +1,1219 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "recommendations.celida.codex.netzwerk-universitaetsmedizin.de"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CELIDARecommendations</h2><p>The official URL for this implementation guide is: </p><pre>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de</pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.5.1-snapshot"] ; # 
+  fhir:name [ fhir:v "CELIDARecommendations"] ; # 
+  fhir:title [ fhir:v "CODEX+ CELIDA Recommendations"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-07T19:48:55+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Universitätsmedizin Greifswald"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Universitätsmedizin Greifswald" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.medizin.uni-greifswald.de/" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "recommendations.celida.codex.netzwerk-universitaetsmedizin.de"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "5.5.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] [
+     fhir:id [ fhir:v "de_netzwerk_universitaetsmedizin_ebm_cpg" ] ;
+     fhir:uri [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/de.netzwerk-universitaetsmedizin.ebm-cpg"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/ImplementationGuide/de.netzwerk-universitaetsmedizin.ebm-cpg>
+     ] ;
+     fhir:packageId [ fhir:v "de.netzwerk-universitaetsmedizin.ebm-cpg" ] ;
+     fhir:version [ fhir:v "0.8.0-snapshot" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/PronePositioning> ;
+         fhir:reference [ fhir:v "ActivityDefinition/PronePositioning" ]
+       ] ;
+       fhir:name [ fhir:v "Abdominal Positioning" ] ;
+       fhir:description [ fhir:v "In ARDS and a PaO2/FiO2 < 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/AbdominalPositioningARDSPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/AbdominalPositioningARDSPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Abdominal positioning plan in case of ARDS and a PaO2/FiO2 < 150 mmHg" ] ;
+       fhir:description [ fhir:v "In ARDS and a PaO2/FiO2 < 150 mmHg, abdominal positioning should be consistently performed, with an abdominal positioning interval of at least 16 hours." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/NoTherapeuticAnticoagulationICUCOVID19NoIndicationPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Anticoagulation Plan for hospitalized intensive-care COVID-19 patients with no specific indication" ] ;
+       fhir:description [ fhir:v "In intensive care patients without a specific indication (e.g. pulmonary embolism), therapeutic anticoagulation should not be given." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWCertoparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWCertoparin" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Certoparin" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Certoparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWDalteparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWDalteparin" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Dalteparin" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Dalteparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWEnoxaparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWEnoxaparin" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Enoxaparin" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Enoxaparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/AntithrombFondapProphInHospitalisedCOVID19PatientsRecommPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Fondaparinux" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/AntithromboticProphylaxisFondaparinuxSubcutaneous> ;
+         fhir:reference [ fhir:v "ActivityDefinition/AntithromboticProphylaxisFondaparinuxSubcutaneous" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Fondaparinux" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Fondaparinux in hospitalised COVID-19 patients (when contraindications for LWMH exist)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/AntithrombLWMHProphInHospitalisedCOVID19PatientsRecommPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with LWMH" ] ;
+       fhir:description [ fhir:v "Hospitalized patients with COVID-19 should receive standard drug thromboembolism prophylaxis with low molecular weight heparin in the absence of contraindications. Alternatively, fondaparinux may be used." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWNadroparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWNadroparin" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Nadroparin" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Nadroparin in hospitalised COVID-19 patients (in absence of contraindications for LWMH)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWTinzaparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWTinzaparin" ]
+       ] ;
+       fhir:name [ fhir:v "Antithrombotic prophylaxis with Tinzaparin" ] ;
+       fhir:description [ fhir:v "Antithrombotic prophylaxis with Tinzaparin in hospitalised COVID-19 patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/CodeSystem/codex-celida> ;
+         fhir:reference [ fhir:v "CodeSystem/codex-celida" ]
+       ] ;
+       fhir:name [ fhir:v "CODEX-CELIDA" ] ;
+       fhir:description [ fhir:v "Concepts required in recommendations that are not defined elsewhere" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopHospitalisedICUCOVID19Patients> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopHospitalisedICUCOVID19Patients" ]
+       ] ;
+       fhir:name [ fhir:v "Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication" ] ;
+       fhir:description [ fhir:v "Hospitalised COVID-19 patients, treated on ICU, without thrombembolic complication" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/CodeSystem/KontaktArtDe> ;
+         fhir:reference [ fhir:v "CodeSystem/KontaktArtDe" ]
+       ] ;
+       fhir:name [ fhir:v "KontaktArtDe" ] ;
+       fhir:description [ fhir:v "Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWArgatra> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWArgatra" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Argatroban" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWCertoparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWCertoparin" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Certoparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Certoparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin1xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin1xd" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin2xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparin2xd" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWDalteparinTable> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWDalteparinTable" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Dalteparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin1xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin1xd" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Enoxaparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin2xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWEnoxaparin2xd" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Enoxaparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Enoxaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationFondaparinux> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationFondaparinux" ]
+       ] ;
+       fhir:name [ fhir:v "NO Therapeutic Anticoagulation Treatment with Fondaparinux" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWNadroparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWNadroparin" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Nadroparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Nadroparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWTinzaparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWTinzaparin" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with Tinzaparin" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with Tinzaparin for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/NoTherapeuticAnticoagulationWUFH> ;
+         fhir:reference [ fhir:v "ActivityDefinition/NoTherapeuticAnticoagulationWUFH" ]
+       ] ;
+       fhir:name [ fhir:v "No Therapeutic Anticoagulation Treatment with UFH" ] ;
+       fhir:description [ fhir:v "No Therapeutic Anticoagulation Treatment with UFH for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point0> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point0" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0 - 0.39" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point4" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 043 - 0.49" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point5> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point5" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5 - 0.59" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point6> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point6" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6 - 0.69" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point7> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point7" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7 - 0.79" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point8> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point8" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8 - 0.89" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point9> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-point9" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9 - 0.99" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-1> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19patientsInterventionPlan-fio2-1" ]
+       ] ;
+       fhir:name [ fhir:v "PEEP Intervention Plan for Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0" ] ;
+       fhir:description [ fhir:v "PEEP Intervention Plan for Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0 - 1.09" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopHospitalisedCOVID19PatientsWithContraIndications> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopHospitalisedCOVID19PatientsWithContraIndications" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Hospitalised COVID-19 patients with existing contraindications to LWMH" ] ;
+       fhir:description [ fhir:v "Population for recommendation 15: Hospitalised COVID-19 patients with existing contraindications to LWMH" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopHospitalisedCOVID19PatientsWOContraIndications" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Hospitalised COVID-19 patients without contraindications to LWMH" ] ;
+       fhir:description [ fhir:v "Population for recommendation 15: Hospitalised COVID-19 patients without contraindications to LWMH" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopHospitalisedNonICUCOVID19PatientsWITHHighRisk> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopHospitalisedNonICUCOVID19PatientsWITHHighRisk" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Hospitalised COVID-19 patients without the need for intensive care therapy considered high-risk for developing venous thrombosis" ] ;
+       fhir:description [ fhir:v "Population for recommendation 17 from guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: without the need for intensive care therapy, considered high-risk for developing venous thrombosis" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patientsWithARDS> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patientsWithARDS" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients with ARDS" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients with ARDS" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients with severe ARDS" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point0> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point0" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.0" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point4> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point4" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.4" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point5> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point5" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.5" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point6> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point6" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.6" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point7> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point7" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.7" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point8> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point8" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.8" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point9> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-point9" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 0.9" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-1> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedCOVID19patients-fio2-1" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated COVID-19 Patients, inspiratory oxygen fraction currently 1.0" ] ;
+       fhir:description [ fhir:v "Ventilated COVID-19 patients, inspiratory oxygen fraction currently 1.0" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "EvidenceVariable" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopulationVentilatedARDSPatients> ;
+         fhir:reference [ fhir:v "EvidenceVariable/PopulationVentilatedARDSPatients" ]
+       ] ;
+       fhir:name [ fhir:v "Population: Ventilated patients with ARDS" ] ;
+       fhir:description [ fhir:v "Patients with ARDS" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/ProphylacticAnticoagulationWHeparinSC> ;
+         fhir:reference [ fhir:v "ActivityDefinition/ProphylacticAnticoagulationWHeparinSC" ]
+       ] ;
+       fhir:name [ fhir:v "Prophylactic Anticoagulation Treatment with UFH subcutaneous" ] ;
+       fhir:description [ fhir:v "Prophylactic Treatment with UFH subcutaneous for non-intensive care hospitalised COVID-19 patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecCollectionNoTherapeuticAnticoagNoIndicationICUCOVID19" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: ICU COVID-19 Patients with No Specific Indication" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for ICU COVID-19 Patients with No Specific Indication" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecommendationCollectionAbdominalPositioningARDS> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecommendationCollectionAbdominalPositioningARDS" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Patients with ARDS and a PaO2/FiO2 < 150 mmHg" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for Patients with ARDS and a PaO2/FiO2 < 150 mmHg" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecCollectionProphAnticoagulationHospitalizedCOVID19Patients" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Prophylactic Anticoagulation in Hospitalized COVID-19 Patients" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for Hospitalized COVID-19 Patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecCollectionTherapeuticAnticoagNonICUHighRiskCOVID19Patients" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Therapeutic Anticoagulation in Non-ICU, High-Risk COVID-19 Patients" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for non-ICU, High-Risk COVID-19 Patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecommendationCollectionVentilatedCOVID19patients> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecommendationCollectionVentilatedCOVID19patients" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Ventilated COVID-19 Patients" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for Ventilated COVID-19 Patients" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecommendationCollectionVentilatedPatientsWithARDS> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecommendationCollectionVentilatedPatientsWithARDS" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Ventilated Patients with ARDS" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for Ventilated Patients with ARDS" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/RecommendationCollectionVentilationCOVID19patientsWithARDS> ;
+         fhir:reference [ fhir:v "PlanDefinition/RecommendationCollectionVentilationCOVID19patientsWithARDS" ]
+       ] ;
+       fhir:name [ fhir:v "Recommendation Collection: Ventilation Plan for Ventilated COVID-19 patients with ARDS" ] ;
+       fhir:description [ fhir:v "Recommendation Collection for Ventilated COVID-19 patients with ARDS" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/TherapeuticAnticoagulationNonICUHighRiskCOVID19PatientsPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Plan (hospitalised, non-intensive care, COVID-19 patients with no renal function impairment (eGFR >= 30ml/min))" ] ;
+       fhir:description [ fhir:v "In hospitalized, non-intensive care patients with COVID-19 and increased risk (e.g., D-dimers ≥ 2 mg/l), therapeutic anticoagulation can be considered if the risk of bleeding is low. Anticoagulation, preferentially with NMH or UFH, can be considered." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationUFH> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationUFH" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment UFH" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (UFH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationWArgatra> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationWArgatra" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Argatroban" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment with Argatroban for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHCertoparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHCertoparin" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Certoparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Certoparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin1xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin1xd" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin2xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparin2xd" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHDalteparinTable> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHDalteparinTable" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Dalteparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Dalteparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin1xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin1xd" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Enoxaparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Enoxaparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin2xd> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHEnoxaparin2xd" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Enoxaparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Enoxaparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationFondaparinux> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationFondaparinux" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Fondaparinux" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment with Fondaparinux for non-intensive care hospitalised COVID-19 patients patients with no specific indications (i.e., pulmonary embolism)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHNadroparin" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Nadroparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patientswith high risk (D-Dimer >= 2mg/l) with Nadroparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActivityDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ActivityDefinition/TherapeuticAnticoagulationNMHTinzaparin> ;
+         fhir:reference [ fhir:v "ActivityDefinition/TherapeuticAnticoagulationNMHTinzaparin" ]
+       ] ;
+       fhir:name [ fhir:v "Therapeutic Anticoagulation Treatment with Tinzaparin" ] ;
+       fhir:description [ fhir:v "Therapeutic Anticoagulation Treatment (NMH) for non-intensive care hospitalised COVID-19 patients patients with high risk (D-Dimer >= 2mg/l) with Tinzaparin" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedCOVID19PatientsWithARDSVentilationPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedCOVID19PatientsWithARDSVentilationPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Ventilation Plan for COVID-19 patients with ARDS" ] ;
+       fhir:description [ fhir:v "In ventilated patients with COVID-19 and ARDS, tidal volume should be ≤ 6 ml/kg standard body weight, end-inspiratory airway pressure ≤ 30 cm H2O." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/PlanDefinition/VentilatedARDSPatientsInterventionPlan> ;
+         fhir:reference [ fhir:v "PlanDefinition/VentilatedARDSPatientsInterventionPlan" ]
+       ] ;
+       fhir:name [ fhir:v "Ventilation Plan for patients with ARDS" ] ;
+       fhir:description [ fhir:v "We recommend ventilating patients with ARDS with a VT ≤ 6 ml/kg standard body weight (bw). (Table 1, Appendix)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:source [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "CELIDA Recommendations" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:source [ fhir:v "changelog.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "changelog.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Change Log" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2021+" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "ci-build" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "show-inherited-invariants" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "usage-stats-opt-out" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludexml" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludejsn" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludettl" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludemap" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludeexample" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "extension-domain" ]
+       ] ;
+       fhir:value [ fhir:v "https://www.netzwerk-universitaetsmedizin.de" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "extension-domain" ]
+       ] ;
+       fhir:value [ fhir:v "https://simplifier.net" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

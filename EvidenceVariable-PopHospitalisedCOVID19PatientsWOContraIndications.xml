@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="PopHospitalisedCOVID19PatientsWOContraIndications"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: EvidenceVariable</b><a name="PopHospitalisedCOVID19PatientsWOContraIndications"> </a><a name="hcPopHospitalisedCOVID19PatientsWOContraIndications"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource EvidenceVariable &quot;PopHospitalisedCOVID19PatientsWOContraIndications&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-recommendation-eligibility-criteria.html">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-no-LMWH-contraindications</code></p><p><b>identifier</b>: <code>https://www.ceosys.de</code>/WithoutContraIndications</p><p><b>name</b>: COVID19_patients_without_contraindications</p><p><b>title</b>: Population: Hospitalised COVID-19 patients without contraindications to LWMH</p><p><b>status</b>: active</p><p><b>date</b>: 2024-05-07 19:48:55+0000</p><p><b>description</b>: Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without contraindications to LWMH</p><p><b>actual</b>: false</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: covid19</p><p><b>exclude</b>: false</p><h3>DefinitionByTypeAndValues</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td>Clinical finding (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#404684003)</span></td><td>Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#840539006)</span></td></tr></table></blockquote><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: true</p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: any-of</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: hit2</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: heparin-allergy</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: heparinoid-allergy</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote></blockquote></blockquote></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/hospitalised-covid19-patients-no-LMWH-contraindications"/>
+  <identifier>
+    <system value="https://www.ceosys.de"/>
+    <value value="WithoutContraIndications"/>
+  </identifier>
+  <name value="COVID19_patients_without_contraindications"/>
+  <title value="Population: Hospitalised COVID-19 patients without contraindications to LWMH"/>
+  <status value="active"/>
+  <date value="2024-05-07T19:48:55+00:00"/>
+  <description value="Population for guideline from https://www.awmf.org/leitlinien/detail/ll/113-001LG.html with characteristics: COVID-19 patients without contraindications to LWMH"/>
+  <actual value="false"/>
+  <characteristic>
+    <linkId value="covid19"/>
+    <exclude value="false"/>
+    <definitionByTypeAndValue>
+      <type>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+      </type>
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="840539006"/>
+          <display value="Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"/>
+        </coding>
+      </valueCodeableConcept>
+    </definitionByTypeAndValue>
+  </characteristic>
+  <characteristic>
+    <exclude value="true"/>
+    <definitionByCombination>
+      <code value="any-of"/>
+      <characteristic>
+        <linkId value="hit2"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="404684003"/>
+              <display value="Clinical finding (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="111588002"/>
+              <display value="Heparin-induced thrombocytopenia with thrombosis (disorder)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+      <characteristic>
+        <linkId value="heparin-allergy"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="609328004"/>
+              <display value="Allergic disposition (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="294872001"/>
+              <display value="Allergy to heparin (finding)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+      <characteristic>
+        <linkId value="heparinoid-allergy"/>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="609328004"/>
+              <display value="Allergic disposition (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="294876003"/>
+              <display value="Allergy to heparinoid (finding)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+    </definitionByCombination>
+  </characteristic>
+</EvidenceVariable>

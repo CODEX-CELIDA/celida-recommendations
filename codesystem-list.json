@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.de/CodeSystem/kontaktart-de",
+      "version" : "1.5.0",
+      "status" : "active",
+      "name" : "KontaktArtDe",
+      "title" : "KontaktArtDe",
+      "description" : "Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung"
+    },
+    {
+      "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/CodeSystem/codex-celida",
+      "version" : null,
+      "status" : "draft",
+      "name" : "CODEX_CELIDA",
+      "title" : "CODEX-CELIDA",
+      "description" : "Concepts required in recommendations that are not defined elsewhere"
+    }
+  ]
+}

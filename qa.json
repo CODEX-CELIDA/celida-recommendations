@@ -1,0 +1,19 @@
+{
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/ImplementationGuide/recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+  "name" : "CELIDARecommendations",
+  "title" : "CODEX+ CELIDA Recommendations",
+  "description" : null,
+  "status" : "draft",
+  "package-id" : "recommendations.celida.codex.netzwerk-universitaetsmedizin.de",
+  "ig-ver" : "1.5.1-snapshot",
+  "date" : "Tue, 07 May, 2024 19:48:55 +0000",
+  "dateISO8601" : "2024-05-07T19:48:55+00:00",
+  "errs" : 207,
+  "warnings" : 127,
+  "hints" : 272,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1675175528
+}

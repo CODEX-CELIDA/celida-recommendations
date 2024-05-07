@@ -1,0 +1,138 @@
+{
+  "resourceType" : "PlanDefinition",
+  "id" : "RecommendationCollectionVentilatedCOVID19patients",
+  "meta" : {
+    "profile" : ["https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"RecommendationCollectionVentilatedCOVID19patients\"> </a><a name=\"hcRecommendationCollectionVentilatedCOVID19patients\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;RecommendationCollectionVentilatedCOVID19patients&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation.html\">Recommendation</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>knowledgeRepresentationLevel</b>: structured</p><blockquote><p><b>Action Combination Method</b></p><blockquote><p><b>url</b></p><code>method</code></blockquote><p><b>value</b>: Exactly <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"file:///github/workspace/output/CodeSystem-cs-action-combination-method.html\">Action Combination Method</a>#exactly)</span></p><blockquote><p><b>url</b></p><code>threshold</code></blockquote><p><b>value</b>: 1</p></blockquote><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-ventilation-plan-peep</code></p><p><b>version</b>: 1.0</p><p><b>name</b>: RecommendationCollection36-a</p><p><b>title</b>: PEEP Intervention for Population: Ventilated COVID-19 Patients</p><p><b>type</b>: Workflow Definition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#workflow-definition)</span></p><p><b>status</b>: active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-02-14</p><p><b>publisher</b>: Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)</p><p><b>description</b>: Für die orientierende Einstellung des PEEP bei COVID-19 sollte die FiO2/PEEP-Tabelle des ARDS-Networks berücksichtigt werden. Durch ein engmaschiges Monitoring kann der PEEP der individuellen Situation des Patienten angepasst werden.</p><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.0</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point0.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.4</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point4.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.5</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point5.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.6</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point6.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.7</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point7.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.8</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point8.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_0.9</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-point9.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99</a></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: PEEP_Intervention_Plan_FiO2_1.0</p><p><b>description</b>: PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 1.0 - 1.0</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-VentilatedCOVID19patientsInterventionPlan-fio2-1.html\">PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 1.0 - 1.09</a></p></blockquote></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueCode" : "structured"
+  },
+  {
+    "extension" : [{
+      "url" : "method",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/CodeSystem/cs-action-combination-method",
+          "code" : "exactly"
+        }]
+      }
+    },
+    {
+      "url" : "threshold",
+      "valuePositiveInt" : 1
+    }],
+    "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/ext-action-combination-method"
+  }],
+  "url" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/recommendation/covid19-ventilation-plan-peep",
+  "version" : "1.0",
+  "name" : "RecommendationCollection36-a",
+  "title" : "PEEP Intervention for Population: Ventilated COVID-19 Patients",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+      "code" : "workflow-definition"
+    }]
+  },
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2022-02-14",
+  "publisher" : "Deutsche Gesellschaft für Internistische Intensivmedizin und Notfallmedizin e.V. (DGIIN)",
+  "description" : "Für die orientierende Einstellung des PEEP bei COVID-19 sollte die FiO2/PEEP-Tabelle des ARDS-Networks berücksichtigt werden. Durch ein engmaschiges Monitoring kann der PEEP der individuellen Situation des Patienten angepasst werden.",
+  "action" : [{
+    "title" : "PEEP_Intervention_Plan_FiO2_0.0",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.0 - 0.39",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point0"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.4",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.4 - 0.49",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point4"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.5",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.5 - 0.59",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point5"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.6",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.6 - 0.69",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point6"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.7",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.7 - 0.79",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point7"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.8",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.8 - 0.89",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point8"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_0.9",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 0.9 - 0.99",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-point9"
+  },
+  {
+    "title" : "PEEP_Intervention_Plan_FiO2_1.0",
+    "description" : "PEEP Intervention plan for COVID-19 patients, inspiratory oxygen fraction currently 1.0 - 1.0",
+    "code" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process",
+        "code" : "guideline-based-care"
+      }]
+    },
+    "definitionCanonical" : "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/intervention-plan/peep-fio2-1"
+  }]
+}

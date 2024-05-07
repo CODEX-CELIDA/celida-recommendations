@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/EvidenceVariable/PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure> a fhir:EvidenceVariable ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"^^xsd:anyURI ;
+       fhir:link <https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: EvidenceVariable</b><a name=\"PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure\"> </a><a name=\"hcPopVentilatedCOVID19patientsWithARDSWithOxygenationFailure\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource EvidenceVariable &quot;PopVentilatedCOVID19patientsWithARDSWithOxygenationFailure&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///github/workspace/output/StructureDefinition-recommendation-eligibility-criteria.html\">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-with-ards-with-oxygenation-failure</code></p><p><b>name</b>: Population_COVID19_Ventilated_With_severe_ARDS</p><p><b>title</b>: Population: Ventilated COVID-19 Patients with severe ARDS</p><p><b>status</b>: active</p><p><b>date</b>: 2024-05-07 19:48:55+0000</p><p><b>description</b>: Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)</p><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: all-of</p><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: covid19</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>linkId</b>: horowitz-limit</p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/covid19-inpatient-therapy/population/ventilated-covid19-patients-with-ards-with-oxygenation-failure"^^xsd:anyURI] ; # 
+  fhir:name [ fhir:v "Population_COVID19_Ventilated_With_severe_ARDS"] ; # 
+  fhir:title [ fhir:v "Population: Ventilated COVID-19 Patients with severe ARDS"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-05-07T19:48:55+00:00"^^xsd:dateTime] ; # 
+  fhir:description [ fhir:v "Ventilated COVID-19 patients with severe ARDS, defined by oxygenation failure (Horovitz Quotient lower than 150)"] ; # 
+  fhir:characteristic ( [
+     fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:definitionByCombination [
+       fhir:code [ fhir:v "all-of" ] ;
+       fhir:characteristic ( [
+         fhir:linkId [ fhir:v "covid19" ] ;
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:404684003 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "404684003" ] ;
+               fhir:display [ fhir:v "Clinical finding (finding)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:840539006 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "840539006" ] ;
+               fhir:display [ fhir:v "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+             ] )
+           ]
+         ]
+       ] [
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:71388002 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "71388002" ] ;
+               fhir:display [ fhir:v "Procedure (procedure)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:40617009 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "40617009" ] ;
+               fhir:display [ fhir:v "Artificial ventilation (regime/therapy)" ]
+             ] )
+           ]
+         ]
+       ] [
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a sct:404684003 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "404684003" ] ;
+               fhir:display [ fhir:v "Clinical finding (finding)" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               a sct:67782005 ;
+               fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "67782005" ] ;
+               fhir:display [ fhir:v "Acute respiratory distress syndrome (disorder)" ]
+             ] )
+           ]
+         ]
+       ] [
+         fhir:linkId [ fhir:v "horowitz-limit" ] ;
+         fhir:exclude [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:definitionByTypeAndValue [
+           fhir:type [
+             fhir:coding ( [
+               a loinc:50984-4 ;
+               fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "50984-4" ] ;
+               fhir:display [ fhir:v "Horowitz index in Arterial blood" ]
+             ] )
+           ] ;
+           fhir:value [
+             a fhir:Range ;
+             fhir:high [
+               fhir:value [ fhir:v "150"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "mm[Hg]" ] ;
+               fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "mm[Hg]" ]
+             ]
+           ]
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

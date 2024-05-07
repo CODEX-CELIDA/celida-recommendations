@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="PopulationVentilatedARDSPatients"/>
+  <meta>
+    <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/cpg-on-ebm-on-fhir/StructureDefinition/recommendation-eligibility-criteria"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: EvidenceVariable</b><a name="PopulationVentilatedARDSPatients"> </a><a name="hcPopulationVentilatedARDSPatients"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource EvidenceVariable &quot;PopulationVentilatedARDSPatients&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file:///github/workspace/output/StructureDefinition-recommendation-eligibility-criteria.html">Recommendation Eligibility Criteria</a></p></div><p><b>url</b>: <code>https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/sepsis/population/ventilated-patients-with-ards</code></p><p><b>name</b>: Population_Ventilated_Patients_With_ARDS</p><p><b>title</b>: Population: Ventilated patients with ARDS</p><p><b>status</b>: active</p><p><b>date</b>: 2024-05-07 19:48:55+0000</p><p><b>description</b>: Ventilated patients with ARDS</p><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByCombination</b></p><p><b>code</b>: all-of</p><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote><blockquote><p><b>characteristic</b></p><p><b>exclude</b>: false</p><blockquote><p><b>definitionByTypeAndValue</b></p></blockquote></blockquote></blockquote></blockquote></div>
+  </text>
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/codex-celida/guideline/sepsis/population/ventilated-patients-with-ards"/>
+  <name value="Population_Ventilated_Patients_With_ARDS"/>
+  <title value="Population: Ventilated patients with ARDS"/>
+  <status value="active"/>
+  <date value="2024-05-07T19:48:55+00:00"/>
+  <description value="Ventilated patients with ARDS"/>
+  <characteristic>
+    <exclude value="false"/>
+    <definitionByCombination>
+      <code value="all-of"/>
+      <characteristic>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="71388002"/>
+              <display value="Procedure (procedure)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="40617009"/>
+              <display value="Artificial ventilation (regime/therapy)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+      <characteristic>
+        <exclude value="false"/>
+        <definitionByTypeAndValue>
+          <type>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="404684003"/>
+              <display value="Clinical finding (finding)"/>
+            </coding>
+          </type>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="67782005"/>
+              <display value="Acute respiratory distress syndrome (disorder)"/>
+            </coding>
+          </valueCodeableConcept>
+        </definitionByTypeAndValue>
+      </characteristic>
+    </definitionByCombination>
+  </characteristic>
+</EvidenceVariable>
