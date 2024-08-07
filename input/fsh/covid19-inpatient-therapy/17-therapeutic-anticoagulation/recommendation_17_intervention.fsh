@@ -88,7 +88,7 @@ Description: "Therapeutic Anticoagulation Treatment (UFH) for non-intensive care
       * periodUnit = $ucum#d "day"
   * doseAndRate
     * doseRange
-      * low = 0 '[iU]' "IU" // any dose of i.v. UFH
+      * low = 0.00001 '[iU]' "IU" // any dose of i.v. UFH
 
 Instance: TherapeuticAnticoagulationNMHDalteparin1xd
 InstanceOf: drug-administration-action
